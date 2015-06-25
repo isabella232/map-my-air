@@ -45,7 +45,8 @@ module.exports = {
       notify: false,
       watchOptions: {
         interval: 500
-      }
+      },
+      open:false
     });
   }
 
