@@ -13,6 +13,9 @@ var inject     = require('gulp-inject');
 var plumber    = require('gulp-plumber');
 var sass       = require('gulp-sass');
 var bowerFiles = require('main-bower-files');
+var gutil     = require('gulp-util');
+var gulpif    = require('gulp-if');
+var jade      = require('gulp-jade');
 
 var toInject   = require('./config/filesToInject');
 var toExclude  = require('./config/bowerFilesToExclude');
@@ -39,6 +42,21 @@ module.exports = function () {
       .pipe(plumber())
       .pipe(sass())
       .pipe(gulp.dest('client/styles/css'))
+      .pipe(bsync.reload({ stream: true }));
+  });
+
+  //TODO this is essentially a duplication of the jade task, can we reuse here?
+  //add a watcher for jade as well
+  watch([
+    'client/views/**/*.jade',
+    //'client/index.jade'
+  ], function () {
+    gulp.src([
+      '!./client/index.jade',
+      './client/views/**/*.jade'],{base: './'})
+      .pipe(plumber())
+      .pipe(gulpif(/[.]jade$/, jade().on('error', gutil.log)))
+      .pipe(gulp.dest('./'))
       .pipe(bsync.reload({ stream: true }));
   });
 
