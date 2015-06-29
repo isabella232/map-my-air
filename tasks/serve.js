@@ -23,7 +23,12 @@ module.exports = {
     return nodemon({
         script: 'server/server.js',
         ext: 'js',
-        ignore: ['client', 'dist', 'node_modules', 'gulpfile.js']
+        ignore: ['client', 'dist', 'node_modules', 'gulpfile.js'],
+        env: { 
+          'NODE_ENV': 'development',
+          //output cartodb debugging for development - https://github.com/Vizzuality/cartodb-nodejs
+          'DEBUG': 'cartodb'
+        }
       })
       .on('start', function () {
         if (!openOpts.already) {
