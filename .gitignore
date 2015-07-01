@@ -6,3 +6,5 @@ dist/
 .sass-cache/
 docs/
 .DS_Store
+columbia-wnyc.sublime-project
+columbia-wnyc.sublime-workspace
