@@ -1,0 +1,1191 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"paddin",
+				"padding-right"
+			],
+			[
+				"m",
+				"margin-bottom"
+			],
+			[
+				"font-",
+				"font-size"
+			],
+			[
+				"margin",
+				"margin-left"
+			],
+			[
+				"pa",
+				"padding-top"
+			],
+			[
+				"pad",
+				"padding-left"
+			],
+			[
+				"text",
+				"textdat"
+			],
+			[
+				"legend",
+				"legendpieces"
+			],
+			[
+				"cir",
+				"circleFullSize"
+			],
+			[
+				"way",
+				"waypointSize"
+			],
+			[
+				"fe",
+				"featuresdata"
+			],
+			[
+				"app",
+				"applyLatLngToLayer"
+			],
+			[
+				"radDeg",
+				"radDegFromMiles"
+			],
+			[
+				"nys",
+				"nystractspt"
+			],
+			[
+				"get",
+				"getCntyData"
+			],
+			[
+				"city",
+				"citycartoCSS"
+			],
+			[
+				"info",
+				"infoTRPT"
+			],
+			[
+				"TR",
+				"TRcartoCSS"
+			],
+			[
+				"ny",
+				"nystracts"
+			],
+			[
+				"poly",
+				"polytest"
+			],
+			[
+				"remove",
+				"removehull"
+			],
+			[
+				"prev",
+				"prevzoom  (variable)"
+			],
+			[
+				"the",
+				"thesettings"
+			],
+			[
+				"button",
+				"buttoncontainer"
+			],
+			[
+				"setC",
+				"setCartoCSS"
+			],
+			[
+				"pop2",
+				"pop2010"
+			],
+			[
+				"nystracts",
+				"nystractspt"
+			],
+			[
+				"rad",
+				"radDegFromMiles"
+			],
+			[
+				"T",
+				"TractPtLyr  (variable)"
+			],
+			[
+				"overl",
+				"overlayMapTypes"
+			],
+			[
+				"Trac",
+				"TractPtLyr"
+			],
+			[
+				"setc",
+				"setCartoCSS"
+			],
+			[
+				"geome",
+				"countiesGeometries"
+			],
+			[
+				"P",
+				"PointLyr"
+			],
+			[
+				"nysGe",
+				"nysGeoJSONline"
+			],
+			[
+				"legen",
+				"addLegend"
+			],
+			[
+				"mou",
+				"mouseout"
+			],
+			[
+				"create",
+				"createCircleScale"
+			],
+			[
+				"cur",
+				"curcircvar  (variable)"
+			],
+			[
+				"upate",
+				"updateCircles"
+			],
+			[
+				"data",
+				"dataresource"
+			],
+			[
+				"one",
+				"onecounty"
+			],
+			[
+				"tmp",
+				"tmpstroke"
+			],
+			[
+				"current",
+				"currentbarINFO"
+			],
+			[
+				"gradient",
+				"gradientcontainer"
+			],
+			[
+				"obes",
+				"obesRate"
+			],
+			[
+				"color",
+				"colorStatus"
+			],
+			[
+				"colo",
+				"changeColor"
+			],
+			[
+				"th",
+				"thelabels"
+			],
+			[
+				"res",
+				"resourcetype"
+			],
+			[
+				"cpid",
+				"cpidavail"
+			],
+			[
+				"total",
+				"total_rows"
+			],
+			[
+				"for",
+				"for	for (…) {…}"
+			],
+			[
+				"year",
+				"yearassociatedto='2002"
+			],
+			[
+				"Num",
+				"NumNonDetects"
+			],
+			[
+				"ana",
+				"analytecode"
+			],
+			[
+				"water",
+				"waterquery"
+			],
+			[
+				"state",
+				"state_summary_cutpoints"
+			],
+			[
+				"p",
+				"pollutant"
+			],
+			[
+				"sele",
+				"selectedpollutant"
+			],
+			[
+				"pollut",
+				"pollutantMenu"
+			],
+			[
+				"re",
+				"relative"
+			],
+			[
+				"left",
+				"leftsidebar"
+			],
+			[
+				"fir",
+				"firsttable"
+			],
+			[
+				"gr",
+				"growAndGlow"
+			],
+			[
+				"bacg",
+				"background-color"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"box-sh",
+				"box-shadow:   (property)"
+			],
+			[
+				"hidd",
+				"hidden"
+			],
+			[
+				"cont",
+				"containerbox"
+			],
+			[
+				"bac",
+				"background-color"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "Packages/SASS Build/SASS.sublime-build",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "mark",
+		"selected_items":
+		[
+			[
+				"mark",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"mar",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"git add",
+				"Git: Quick Add"
+			],
+			[
+				"git",
+				"Git: Add Tag"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"disa",
+				"Package Control: Disable Package"
+			],
+			[
+				"ena",
+				"Package Control: Enable Package"
+			],
+			[
+				"isntall",
+				"Package Control: Install Package"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"packag",
+				"Package Control: Install Package"
+			],
+			[
+				"gist",
+				"GitHub: Public Gist from Selection"
+			],
+			[
+				"paca",
+				"Package Control: Enable Package"
+			],
+			[
+				"enable pac",
+				"Package Control: Enable Package"
+			],
+			[
+				"package",
+				"Package Control: Enable Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"push",
+				"Git: Push Current Branch"
+			],
+			[
+				"q",
+				"Git: Quick Commit"
+			],
+			[
+				"add",
+				"Git: Add..."
+			],
+			[
+				"branch",
+				"Git: New Branch"
+			],
+			[
+				"change",
+				"Git: Change Branch"
+			],
+			[
+				"gui",
+				"Git: Gui"
+			],
+			[
+				"pu",
+				"Git: Push Current Branch"
+			],
+			[
+				"git gui",
+				"Git: Gui"
+			],
+			[
+				"git in",
+				"Git: Init"
+			],
+			[
+				"pull",
+				"Git: Pull Current Branch"
+			],
+			[
+				"todo",
+				"Show TODOs: Open files only"
+			],
+			[
+				"insert",
+				"Gist: Insert Gist"
+			],
+			[
+				"jquer",
+				"Snippet: HTML - Include jQuery"
+			],
+			[
+				"fet",
+				"Fetch: File"
+			],
+			[
+				"fetch",
+				"Fetch: File"
+			],
+			[
+				"htmlp",
+				"HTMLPrettify: Prettify"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"tidy",
+				"TidyHTML"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Gist: Insert Gist"
+			],
+			[
+				"jq",
+				"Snippet: jQuery ready function"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"list p",
+				"Package Control: List Packages"
+			],
+			[
+				"to",
+				"Show TODOs: Open files only"
+			],
+			[
+				"statu",
+				"Git: Status"
+			],
+			[
+				"g",
+				"Git: Gitk"
+			],
+			[
+				"tod",
+				"Show TODOs: Open files only"
+			],
+			[
+				"show",
+				"Show TODOs: Open files only"
+			],
+			[
+				"com",
+				"Git: Commit"
+			],
+			[
+				"function",
+				"Snippet: Function"
+			],
+			[
+				"qu",
+				"Git: Quick Commit"
+			],
+			[
+				"push b",
+				"Git: Push Current Branch"
+			],
+			[
+				"comm",
+				"Git: Commit"
+			],
+			[
+				"git cus",
+				"Git: Custom Command"
+			],
+			[
+				"git push",
+				"Git: Push Current Branch"
+			],
+			[
+				"qui",
+				"Git: Quick Commit"
+			],
+			[
+				"gis",
+				"Gist: Create Private Gist"
+			],
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"syntax sq",
+				"Set Syntax: SQL"
+			],
+			[
+				"package re",
+				"Package Control: Remove Package"
+			],
+			[
+				"copy",
+				"File: Copy as Tag script"
+			],
+			[
+				"fetc",
+				"Fetch: File"
+			],
+			[
+				"sni js",
+				"Snippet: A basic jQuery selector"
+			],
+			[
+				"snippet jq",
+				"Snippet: jQuery ready function"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"package in",
+				"Package Control: Install Package"
+			],
+			[
+				"package lis",
+				"Package Control: List Packages"
+			],
+			[
+				"pack ins",
+				"Package Control: Install Package"
+			],
+			[
+				"pack remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"colorscheme",
+				"ColorSchemeSelector: Next Color Scheme"
+			],
+			[
+				"colors",
+				"ColorSchemeSelector: Select Color Scheme"
+			],
+			[
+				"packag inst",
+				"Package Control: Install Package"
+			],
+			[
+				"packages",
+				"Preferences: Browse Packages"
+			],
+			[
+				"package install",
+				"Package Control: Install Package"
+			],
+			[
+				"package remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"",
+				"Fetch: Package"
+			],
+			[
+				"gist ope",
+				"Gist: Open Gist"
+			],
+			[
+				"snippe",
+				"Snippet: html"
+			],
+			[
+				"html	",
+				"Snippet: HTML - Stylesheet link"
+			],
+			[
+				"snipp",
+				"Snippet: html"
+			],
+			[
+				"copy	",
+				"File: Copy as Tag a"
+			],
+			[
+				"snippet html",
+				"Snippet: html"
+			],
+			[
+				"snippet html5",
+				"Snippet: HTML - HTML5 shiv"
+			],
+			[
+				"sni",
+				"Snippet: html"
+			],
+			[
+				"snip	",
+				"Snippet: CSS - display: block;"
+			],
+			[
+				"htm inc	",
+				"Snippet: HTML - Include jQuery"
+			],
+			[
+				"snippet sc",
+				"Snippet: HTML - Script"
+			],
+			[
+				"pacakg",
+				"Package Control: Remove Package"
+			],
+			[
+				"jav",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"instl",
+				"Package Control: Install Package"
+			],
+			[
+				"snip",
+				"Snippet: HTML - Meta tags"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: 	",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ins	",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: en",
+				"Package Control: Enable Package"
+			],
+			[
+				"su",
+				"Preferences: Settings - User"
+			]
+		],
+		"width": 512.0
+	},
+	"console":
+	{
+		"height": 311.0,
+		"history":
+		[
+			"import urllib.request,os; pr='Preferences.sublime-settings'; ip='ignored_packages'; n='Package Control'; s=sublime.load_settings(pr); ig=s.get(ip); ig.append(n); s.set(ip,ig); sublime.save_settings('Preferences.sublime-settings'); pf=n+'.sublime-package'; urllib.request.install_opener(urllib.request.build_opener(urllib.request.ProxyHandler())); by=urllib.request.urlopen('https://packagecontrol.io/'+pf.replace(' ','%20')).read(); open(os.path.join(sublime.installed_packages_path(),pf),'wb').write(by); ig.remove(n); s.set(ip,ig); sublime.save_settings(pr); print('Package Control: 3.0.0 upgrade successful!')",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/X/projects/columbia_wnyc/web/columbia-WNYC"
+	],
+	"file_history":
+	[
+		"/X/git_repos/software_notes/cloud_computing/web_server_general.md",
+		"/X/git_repos/software_notes/command_line/vim.md",
+		"/X/git_repos/software_notes/gdal/ogr2ogr.md",
+		"/X/git_repos/software_notes/javascript/node.md",
+		"/X/git_repos/software_notes/R/Rmarkdown.md",
+		"/X/git_repos/software_notes/R/dplyr_tidyr.md",
+		"/X/git_repos/software_notes/cloud_computing/cloud_computing_general.md",
+		"/X/git_repos/software_notes/R/R_miscellaneous.md",
+		"/X/git_repos/software_notes/command_line/linux_general.md",
+		"/X/git_repos/software_notes/command_line/windows.md",
+		"/D/junk/testapp2/app.js",
+		"/X/git_repos/software_notes/git/git_miscellaneous.md",
+		"/X/git_repos/software_notes/SQL/PostgreSQL/postgresql_miscellaneous.md",
+		"/X/projects/columbia_bike/bikeStats/bikeApp/sample_data/BIKE0001_GPS01_S01_150306.gpx",
+		"/X/git_repos/software_notes/R/dates.md",
+		"/X/git_repos/software_notes/SQL/PostgreSQL/dates.md",
+		"/X/junk/3_geocode_alcohol_outlets_google_ZP4.py",
+		"/X/administrative/computer/amazon_web_services/testing_pem_files/keypair5.pem",
+		"/X/administrative/computer/amazon_web_services/testing_pem_files/keypair5.ppk",
+		"/X/administrative/computer/amazon_web_services/testing_pem_files/keypair3.pem",
+		"/X/projects/columbia_bike/bikeStats/bikeApp/sample_data/BIKE0001_GPS01_S01_150306_navals.gpx",
+		"/X/git_repos/software_notes/Python/spatial.md",
+		"/X/zev/computer/python/8_geocode_wave6_arcgis_google_noZP4.py",
+		"/X/projects/columbia_bike/data/client_data/20150610_pdr_data/1192_P6.CSV",
+		"/X/git_repos/software_notes/.gitignore",
+		"/X/git_repos/software_notes/R/web_scraping_etc.md",
+		"/X/git_repos/software_notes/jade/jade.md",
+		"/X/git_repos/software_notes/SQL/PostgreSQL/strings.md",
+		"/X/git_repos/software_notes/R/apply_functions.md",
+		"/X/git_repos/software_notes/css/css.md",
+		"/X/git_repos/software_notes/R/sql_connect_query.md",
+		"/X/git_repos/software_notes/markdown/markdown.md",
+		"/X/data/aqs_airpollutants/aqs_pregenerated/retrieve_pregenerated_data_and_postgres_annual.R",
+		"/X/git_repos/software_notes/SQL/PostgreSQL/postgresql.md",
+		"/X/git_repos/software_notes/illustrator/illustrator.md",
+		"/X/git_repos/software_notes/command_line_utilities/wget.md",
+		"/X/git_repos/software_notes/command_line_utilities/wgrib2.md",
+		"/X/git_repos/software_notes/SQL/PostgreSQL/postgis.md",
+		"/X/git_repos/software_notes/sublime_text/sublime_text.md",
+		"/X/git_repos/software_notes/geocoding/general_geocoding.md",
+		"/X/git_repos/software_notes/R/geocoding.md",
+		"/X/zev/zevross_website/app/styles/modules/_footer.scss",
+		"/X/zev/zevross_website/app/styles/modules/_work.scss",
+		"/X/zev/zevross_website/app/styles/modules/_index.scss",
+		"/X/zev/zevross_website/app/styles/main.scss",
+		"/X/zev/zevross_website/app/styles/modules/_allsite.scss",
+		"/X/zev/zevross_website/gulp/tasks/watch.js",
+		"/X/zev/zevross_website/app/views/work.jade",
+		"/X/zev/zevross_website/app/views/modules/_focus_three.jade",
+		"/X/zev/zevross_website/app/views/modules/_footer.jade",
+		"/X/zev/zevross_website/app/views/layouts/_default.jade",
+		"/X/zev/zevross_website/app/views/index.jade",
+		"/X/git_repos/software_notes/html/bootstrap.md",
+		"/X/zev/zevross_website/app/styles/modules/_unify-template.scss",
+		"/X/zev/zevross_website/app/views/modules/_header.jade",
+		"/X/zev/zevross_website/readme.md",
+		"/X/web_development/example_bootstrap_themes/unify/Unify-v1.7/HTML/assets/css/style.css",
+		"/X/zev/zevross_website/app/styles/modules/_header.scss",
+		"/X/web_development/example_bootstrap_themes/unify/Unify-v1.7/HTML/assets/css/app.css",
+		"/X/zev/zevross_website/app/styles/modules/_lava-template.scss",
+		"/X/web_development/example_bootstrap_themes/unify/Unify-v1.7/HTML/assets/css/footers/footer-v1.css",
+		"/X/web_development/example_bootstrap_themes/unify/Unify-v1.7/HTML/assets/css/footers/footer-default.css",
+		"/X/web_development/example_bootstrap_themes/unify/Unify-v1.7/HTML/assets/css/plugins.css",
+		"/X/web_development/example_bootstrap_themes/unify/Unify-v1.7/HTML/assets/css/custom.css",
+		"/X/zev/zevross_website/app/styles/modules/_focus_three.scss",
+		"/X/web_development/example_bootstrap_themes/unify/Unify-v1.7/HTML/index.html",
+		"/X/zev/zevross_website/app/views/publications.jade",
+		"/X/zev/zevross_website/app/scripts/main.js",
+		"/X/zev/zevross_website/app/scripts/modules/allsite.js",
+		"/X/web_development/example_bootstrap_themes/unify/Unify-v1.7/HTML/assets/css/headers/header-default.css",
+		"/X/zev/zevross_website/gulp/config.js",
+		"/X/zev/zevross_website/app/views/about.jade",
+		"/X/zev/zevross_website/dist/index.html",
+		"/X/zev/zevross_website/app/views/clients.jade",
+		"/X/zev/zevross_website/app/views/_about.jade",
+		"/X/zev/zevross_website/.env",
+		"/X/zev/zevross_website/.sass-cache/01d52690baeb1fe32a1a170085051abbb4fb9eb2/_header.scssc",
+		"/X/web_development/example_bootstrap_themes/unify/products-WB0412697.zip",
+		"/X/zev/zevross_website/.tmp/index.html",
+		"/X/zev/zevross_website/app/scripts/sftp-config.json",
+		"/X/zev/computer/sublime_text/sftp-config.json",
+		"/X/zev/zevross_website/dist/sftp-config.json",
+		"/X/zev/zevross_website/app/scripts/modules/dataviz_d3brush.js",
+		"/X/zev/zevross_website/bower.json",
+		"/X/zev/zevross_website/gulp/tasks/serve.js",
+		"/X/zev/zevross_website/gulp/tasks/build.js",
+		"/X/zev/zevross_website/app/styles/modules/_dataviz_d3brush.scss",
+		"/X/zev/zevross_website/app/styles/modules/_latest_work.scss",
+		"/X/zev/zevross_website/app/views/modules/_latest-work.jade",
+		"/X/zev/zevross_website/app/scripts/modules/dataviz_magnifiermap.js",
+		"/X/zev/zevross_website/app/scripts/modules/dataviz_heatmapcartodb.js",
+		"/X/zev/zevross_website/app/styles/modules/_dataviz_magnifiermap.scss",
+		"/X/web_development/dataviz_templates/cartodb/cartodb_tiles.html",
+		"/X/zev/zevross_website/.gitignore",
+		"/X/zev/zevross_website/bower_components/xx/index.js",
+		"/X/zev/zevross_website/bower_components/cartodbjs/index.js",
+		"/X/zev/zevross_website/bower_components/Leaflet.MagnifyingGlass/leaflet.magnifyingglass.js",
+		"/X/web_development/dataviz_templates/leaflet/magnifying_glass.html",
+		"/X/web_development/dataviz_templates/leaflet/assets/leaflet.magnifyingglass.js",
+		"/X/zev/new_website/lava_theme/bootstrap3/multipage/css/main.css",
+		"/X/zev/zevross_website/app/styles/modules/_tmp.scss",
+		"/X/zev/zevross_website/app/scripts/modules/d3brush.js",
+		"/X/zev/zevross_website/app/styles/_lava-template.scss",
+		"/X/zev/zevross_website/app/styles/_custom.scss",
+		"/X/zev/zevross_website/bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss",
+		"/X/zev/new_website/lava_theme/bootstrap3/multipage/index.html",
+		"/X/zev/zevross_website/dist/styles/main.min.css",
+		"/D/junk/New folder (9)/app/views/layouts/_default.jade",
+		"/D/junk/New folder (9)/app/views/index.jade",
+		"/D/junk/New folder (9)/app/views/data/index.json",
+		"/D/junk/New folder (9)/.tmp/styles/main.css",
+		"/D/junk/New folder (9)/app/styles/main.scss",
+		"/D/junk/New folder (9)/.tmp/styles/custom.css",
+		"/D/junk/New folder (9)/app/views/modules/_footer.jade",
+		"/D/junk/New folder (9)/gulp/tasks/watch.js",
+		"/D/junk/New folder (9)/readme.md",
+		"/D/junk/New folder (9)/.tmp/index.html",
+		"/D/junk/New folder (9)/app/views/modules/_header.jade",
+		"/D/junk/New folder (9)/gulp/tasks/styles.js",
+		"/D/junk/New folder (9)/app/.tmp/styles",
+		"/D/junk/New folder (9)/app/styles/main.css",
+		"/D/junk/New folder (9)/app/styles/zzz.scss",
+		"/D/junk/New folder (9)/app/styles/aaaa.scss",
+		"/D/junk/New folder (9)/app/styles/_custom.scss",
+		"/D/junk/New folder (9)/app/styles/custom.scss",
+		"/D/junk/New folder (9)/app/styles/lava_template.scss",
+		"/D/junk/New folder (9)/app/views/modules/_middle.jade",
+		"/D/junk/New folder (9)/app/styles/modules/main.scss"
+	],
+	"find":
+	{
+		"height": 36.0
+	},
+	"find_in_files":
+	{
+		"height": 96.0,
+		"where_history":
+		[
+			"",
+			"app.js"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"mkdir",
+			"unzip",
+			"```",
+			"service",
+			"chmo",
+			"chmod",
+			"DNS",
+			"75px",
+			"<p>",
+			"small",
+			"address",
+			"copy",
+			"list-unst",
+			"list",
+			"list-unsty",
+			"small",
+			"headline",
+			"ff755a",
+			"social",
+			"hover",
+			"contain",
+			"latest",
+			"section",
+			"args",
+			"font",
+			"zevross_logo",
+			"../img",
+			"url",
+			"width",
+			"span",
+			"$activelink",
+			"navbar-header",
+			"navbar-brand",
+			"img.res",
+			"header",
+			"brand",
+			"navbar",
+			"navvar",
+			"navebar",
+			"navbar-nav",
+			"custom",
+			"message",
+			"h2",
+			"    \n",
+			"import",
+			".navbar-inver",
+			"navbar-in",
+			"local",
+			"logo",
+			"background",
+			"d3",
+			"console",
+			"analyte",
+			"serve",
+			"allo,",
+			"allo",
+			"resetviz",
+			"colorScal",
+			"console",
+			"totaltimese",
+			"colorlege",
+			"colorlegend",
+			"drinks",
+			"domain",
+			"color",
+			"linear",
+			"tweenT",
+			"d3path",
+			"transform",
+			"demo",
+			"console",
+			"ptFe",
+			"marker",
+			"circle",
+			"console.l",
+			"projectPoint",
+			"pointsA",
+			"transition",
+			"feature",
+			"iterate",
+			"marker",
+			"twe",
+			"marker",
+			"startPoint",
+			"d3path",
+			"select",
+			"distfr",
+			"popq",
+			"table_na",
+			"nystractspt",
+			"table_n",
+			"myBut",
+			"reset",
+			"console",
+			"table_",
+			"{{",
+			"cartocss",
+			"city",
+			"blue",
+			".setQuery",
+			"setq",
+			"query",
+			"blah",
+			"hull",
+			"gray37",
+			"sql",
+			"geojson",
+			"Geojson",
+			"getC",
+			"bound",
+			"remove",
+			"eth",
+			"select * from",
+			"setq",
+			"setQ",
+			"remov",
+			"});",
+			"tick",
+			"d3.",
+			"sql",
+			"frm",
+			"geo",
+			"city",
+			"interaction",
+			"setat",
+			"interaction",
+			"nystrac",
+			"eth"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"`<p>`",
+			"grid_noise",
+			"../../images",
+			"$keycolor1",
+			".setSQL",
+			"d3vals.svgwidth",
+			"Asia"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 30.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 211.0
+	},
+	"output.sftp":
+	{
+		"height": 130.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 139.0
+	},
+	"pinned_build_system": "",
+	"project": "columbia-wnyc.sublime-project",
+	"replace":
+	{
+		"height": 66.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"main.s",
+				"app\\styles\\main.scss"
+			],
+			[
+				"index.scss",
+				"app\\styles\\modules\\_index.scss"
+			],
+			[
+				"default.jad",
+				"app\\views\\layouts\\_default.jade"
+			],
+			[
+				"footer.jad",
+				"app\\views\\modules\\_footer.jade"
+			],
+			[
+				"allsite",
+				"app\\styles\\modules\\_allsite.scss"
+			],
+			[
+				"main",
+				"app\\styles\\main.scss"
+			],
+			[
+				"header.jade",
+				"app\\views\\modules\\_header.jade"
+			],
+			[
+				"_header.sc",
+				"app\\styles\\modules\\_header.scss"
+			],
+			[
+				"_foot",
+				"app\\styles\\modules\\_footer.scss"
+			],
+			[
+				"_index",
+				"app\\styles\\modules\\_index.scss"
+			],
+			[
+				"_index.",
+				"app\\styles\\modules\\_index.scss"
+			],
+			[
+				"lava",
+				"app\\styles\\modules\\_lava-template.scss"
+			],
+			[
+				"footer",
+				"app\\views\\modules\\_footer.jade"
+			],
+			[
+				"three",
+				"app\\views\\modules\\_focus_three.jade"
+			],
+			[
+				"main.scss",
+				"app\\styles\\main.scss"
+			],
+			[
+				"header",
+				"app\\styles\\modules\\_header.scss"
+			],
+			[
+				"_header",
+				".sass-cache\\01d52690baeb1fe32a1a170085051abbb4fb9eb2\\_header.scssc"
+			],
+			[
+				"",
+				"app\\views\\layouts\\_default.jade"
+			],
+			[
+				"www",
+				"bin\\www"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"X:\\zev\\zevross_website\\zevross_website.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 373.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
