@@ -25,7 +25,7 @@ module.exports = {
   	// combine compiled Jade and html template files into 
     // build/template.js
     return gulp.src([
-      '!./client/index.jade',
+      './client/index.jade',
       '!./client/index.html',
       //'./app/**/*.html', 
       './client/views/**/*.jade'],{base: './'})

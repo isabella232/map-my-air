@@ -49,10 +49,10 @@ module.exports = function () {
   //add a watcher for jade as well
   watch([
     'client/views/**/*.jade',
-    //'client/index.jade'
+    'client/index.jade'
   ], function () {
     gulp.src([
-      '!./client/index.jade',
+      './client/index.jade',
       './client/views/**/*.jade'],{base: './'})
       .pipe(plumber())
       .pipe(gulpif(/[.]jade$/, jade().on('error', gutil.log)))

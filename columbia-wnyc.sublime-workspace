@@ -291,6 +291,70 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "client/views/home/home.jade",
+			"settings":
+			{
+				"buffer_size": 18,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "server/routes.js",
+			"settings":
+			{
+				"buffer_size": 2393,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/views/home/home.js",
+			"settings":
+			{
+				"buffer_size": 242,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/views/home/home.controller.js",
+			"settings":
+			{
+				"buffer_size": 170,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "tasks/serve.js",
+			"settings":
+			{
+				"buffer_size": 1289,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/index.html",
+			"settings":
+			{
+				"buffer_size": 1186,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/D/junk/htmljade/index.jade",
+			"settings":
+			{
+				"buffer_size": 840,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/index.jade",
+			"settings":
+			{
+				"buffer_size": 870,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "Packages/SASS Build/SASS.sublime-build",
 	"build_system_choices":
@@ -702,10 +766,31 @@
 	},
 	"expanded_folders":
 	[
-		"/X/projects/columbia_wnyc/web/columbia-WNYC"
+		"/X/projects/columbia_wnyc/web/columbia-WNYC",
+		"/X/projects/columbia_wnyc/web/columbia-WNYC/client",
+		"/X/projects/columbia_wnyc/web/columbia-WNYC/client/bower_components",
+		"/X/projects/columbia_wnyc/web/columbia-WNYC/client/views",
+		"/X/projects/columbia_wnyc/web/columbia-WNYC/client/views/home",
+		"/X/projects/columbia_wnyc/web/columbia-WNYC/server",
+		"/X/projects/columbia_wnyc/web/columbia-WNYC/server/config",
+		"/X/projects/columbia_wnyc/web/columbia-WNYC/server/config/environment",
+		"/X/projects/columbia_wnyc/web/columbia-WNYC/tasks",
+		"/X/projects/columbia_wnyc/web/columbia-WNYC/tasks/config"
 	],
 	"file_history":
 	[
+		"/D/junk/htmljade/index.html",
+		"/X/projects/columbia_wnyc/web/columbia-WNYC/client/index.jade",
+		"/D/junk/htmljade/index.jade",
+		"/X/projects/columbia_wnyc/web/columbia-WNYC/client/views/home/home.html",
+		"/X/projects/columbia_wnyc/web/columbia-WNYC/tasks/watch.js",
+		"/X/projects/columbia_wnyc/web/columbia-WNYC/tasks/jade.js",
+		"/X/zev/zevross_website/app/views/index.jade",
+		"/X/projects/columbia_wnyc/web/columbia-WNYC/server/config/environment/development.js",
+		"/X/projects/columbia_wnyc/web/columbia-WNYC/server/routes.js",
+		"/X/projects/columbia_wnyc/web/columbia-WNYC/client/index.html",
+		"/X/projects/columbia_wnyc/web/columbia-WNYC/client/views/home/home.jade",
+		"/X/projects/columbia_wnyc/web/columbia-WNYC/server/config/environment/index.js",
 		"/X/git_repos/software_notes/cloud_computing/web_server_general.md",
 		"/X/git_repos/software_notes/command_line/vim.md",
 		"/X/git_repos/software_notes/gdal/ogr2ogr.md",
@@ -757,7 +842,6 @@
 		"/X/zev/zevross_website/app/views/modules/_focus_three.jade",
 		"/X/zev/zevross_website/app/views/modules/_footer.jade",
 		"/X/zev/zevross_website/app/views/layouts/_default.jade",
-		"/X/zev/zevross_website/app/views/index.jade",
 		"/X/git_repos/software_notes/html/bootstrap.md",
 		"/X/zev/zevross_website/app/styles/modules/_unify-template.scss",
 		"/X/zev/zevross_website/app/views/modules/_header.jade",
@@ -822,18 +906,7 @@
 		"/D/junk/New folder (9)/app/views/modules/_footer.jade",
 		"/D/junk/New folder (9)/gulp/tasks/watch.js",
 		"/D/junk/New folder (9)/readme.md",
-		"/D/junk/New folder (9)/.tmp/index.html",
-		"/D/junk/New folder (9)/app/views/modules/_header.jade",
-		"/D/junk/New folder (9)/gulp/tasks/styles.js",
-		"/D/junk/New folder (9)/app/.tmp/styles",
-		"/D/junk/New folder (9)/app/styles/main.css",
-		"/D/junk/New folder (9)/app/styles/zzz.scss",
-		"/D/junk/New folder (9)/app/styles/aaaa.scss",
-		"/D/junk/New folder (9)/app/styles/_custom.scss",
-		"/D/junk/New folder (9)/app/styles/custom.scss",
-		"/D/junk/New folder (9)/app/styles/lava_template.scss",
-		"/D/junk/New folder (9)/app/views/modules/_middle.jade",
-		"/D/junk/New folder (9)/app/styles/modules/main.scss"
+		"/D/junk/New folder (9)/.tmp/index.html"
 	],
 	"find":
 	{
@@ -1005,8 +1078,280 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "client/views/home/home.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 18,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								12,
+								12
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Extended.tmTheme",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "server/routes.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2393,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1979,
+								1979
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Extended.tmTheme",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 60.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "client/views/home/home.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 242,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								235,
+								235
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Extended.tmTheme",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "client/views/home/home.controller.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 170,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								62,
+								45
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Extended.tmTheme",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "tasks/serve.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1289,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Extended.tmTheme",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 5,
+					"file": "client/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1186,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1186,
+								1186
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Extended.tmTheme",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/D/junk/htmljade/index.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 840,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								840,
+								0
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Extended.tmTheme",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "client/index.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 870,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								870,
+								870
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Extended.tmTheme",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -1027,11 +1372,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.5,
 			1.0
 		],
 		"rows":
@@ -1161,7 +1513,7 @@
 		[
 			[
 				"",
-				"X:\\zev\\zevross_website\\zevross_website.sublime-project"
+				"X:\\git_repos\\software_notes\\software_notes.sublime-project"
 			]
 		],
 		"width": 380.0
@@ -1175,7 +1527,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 	},
