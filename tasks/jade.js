@@ -30,7 +30,7 @@ module.exports = {
       //'./app/**/*.html', 
       './client/views/**/*.jade'],{base: './'})
       .pipe(plumber())
-      .pipe(gulpif(/[.]jade$/, jade().on('error', gutil.log)))
+      .pipe(gulpif(/[.]jade$/, jade({pretty:true}).on('error', gutil.log)))
       .pipe(gulp.dest('./'))
   }
 };

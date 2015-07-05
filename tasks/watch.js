@@ -55,7 +55,7 @@ module.exports = function () {
       './client/index.jade',
       './client/views/**/*.jade'],{base: './'})
       .pipe(plumber())
-      .pipe(gulpif(/[.]jade$/, jade().on('error', gutil.log)))
+      .pipe(gulpif(/[.]jade$/, jade({pretty:true}).on('error', gutil.log)))
       .pipe(gulp.dest('./'))
       .pipe(bsync.reload({ stream: true }));
   });
