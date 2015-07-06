@@ -2,6 +2,7 @@
 
 var config = require('./config/environment');
 var parseXmlString = require('xml2js').parseString;
+//https://github.com/Vizzuality/cartodb-nodejs
 var CartoDB = require('cartodb');
 var cartodbClient = new CartoDB({user: config.cartodb.USER, api_key: config.cartodb.API_KEY});
 
@@ -11,6 +12,8 @@ module.exports = function (app) {
 
   /**
    * @see curl -v -F upload=@/Users/chrismarx/Downloads/eveningrun.gpx http://localhost:3000/gpxroute
+   *
+   * TODO time to move this function to its own function class export
    */
   app.route('/gpxroute')
     .post(function(req, res) {
@@ -31,31 +34,57 @@ module.exports = function (app) {
 
           console.log(lineString);
 
+          //To perform the same call without the api, use
+          // curl -v --data "q=INSERT INTO gpxline (the_geom, name) VALUES (ST_GeomFromText('LINESTRING(0 0, 0 1)',4326), 'test12345')&api_key={insert key}" https://columbia-wnyc.cartodb.com/api/v2/sql
           cartodbClient.on('connect', function() {
               console.log("connected");
 
-              // template can be used
-             /*cartodbClient.query("select * from gpxlines limit 5", {table: 'tracker'}, function(err, data){
-                  console.log(data);
-              });*/
-
-              cartodbClient.query("INSERT INTO gpxlines (the_geom, name) VALUES (ST_GeomFromText('{lineString}',4326),'test{timeStamp}')", 
+              //TODO seems like this library should really be supporting promises here...
+              cartodbClient.query("INSERT INTO gpxline (cartodb_id, the_geom, name) VALUES (DEFAULT, ST_GeomFromText('{lineString}',4326),'test{timeStamp}') returning cartodb_id", 
                 {
                   lineString:lineString + ")",
                   timeStamp:new Date().getTime()
                 },
                 function(err, data){
-                  console.log(data);
-              });              
+                  if(err){
+                    //TODO
+                  }
 
-              // chained calls are allowed
-              //.query("select * from tracker limit 5 offset 5", function(err, data){});
+                  console.log(data);
+
+                  //get the id of the record we just inserted, and then complete the rest of the processing
+                  var cartodbId = data.rows[0].cartodb_id;
+
+                  cartodbClient.query("INSERT INTO gpxline_part (gpxline_id,the_geom,line_part_index) select * from(select id,ST_MakeLine(geom,lead(geom)OVER(ORDER BY index ASC))as line,index from(SELECT id,(dp).path[1]As index,(dp).geom as geom FROM(SELECT g.cartodb_id as id,ST_DumpPoints(ST_Simplify(g.the_geom,.00005))AS dp from gpxline g where g.cartodb_id = {cartodbId})linePoints)a)b where line is not null", 
+                    {
+                      cartodbId:cartodbId
+                    },
+                    function(err, data){
+                      if(err){
+                        //TODO
+                      }
+
+                      //and now... update the ukpred values based on wync data
+                      cartodbClient.query("update gpxline_part gp set ukpred = (SELECT avg(w.ukpred)FROM wnyc w where ST_DWithin(w.the_geom,gp.the_geom,.0005))where gp.gpxline_id = {cartodbId}",{
+                        cartodbId:cartodbId
+                      },
+                      function(err,data){
+                          if(err){
+                            //TODO
+                          }
+
+                          //data is ready to return as geoson, but that request can be made directly to carto, so just return the id we need
+                          console.log("success");
+                          res.json({"cartodbId":cartodbId});
+                      });
+                  });
+              });
           });
 
           cartodbClient.connect();
       });
 
-      res.send('success');
+      //response is sent from cartodbclient callback
     });
 
   app.route('/gpxroute/:id')

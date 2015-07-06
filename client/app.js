@@ -4,15 +4,16 @@ angular.module('columbiaWync', [
   'ngRoute',
   'ngResource',
   'ngSanitize',
-  'ngAnimate'
-])
-  .config(function ($routeProvider, $locationProvider) {
+  'ngAnimate',
+  'leaflet-directive',
+  'staticJSON'
+]).config(function ($routeProvider, $locationProvider, $httpProvider) {
 
     $routeProvider
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/app'
       });
 
     $locationProvider.html5Mode(true);
 
-  });
+});

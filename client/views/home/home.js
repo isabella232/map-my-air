@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('columbiaWync')
+	angular.module('columbiaWync')
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
