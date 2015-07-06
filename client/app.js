@@ -11,7 +11,7 @@ angular.module('columbiaWync', [
 
     $routeProvider
       .otherwise({
-        redirectTo: '/app'
+        redirectTo: '/'
       });
 
     $locationProvider.html5Mode(true);
