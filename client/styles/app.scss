@@ -4,64 +4,150 @@
 
 $keycolor1: #076ff7;
 $padheader: 10px;
-
-
+$sansfont: 'Open Sans',
+sans-serif;
+$brandfont: 'Oswald',
+sans-serif;
+$font: 'Open Sans',
+sans-serif; // "Helvetica Neue", Helvetica, Arial, sans-serif;
 /* ==========================================================================
    Body settings
    ========================================================================== */
 
-
 body {
-  font-family: sans-serif;
+    font-family: sans-serif;
+    padding-top: 100px;
 }
 
-#leaflet-map { 
-	height: 300px;
-	width: 400px;
+#leaflet-map {
+    height: 300px;
+    width: 400px;
 }
-
-
 /* ==========================================================================
    Header
    ========================================================================== */
-.navbar {
-  background-color: $keycolor1;
-  border-color: transparent;
-  padding-bottom: $padheader;
 
+.navbar {
+    background-color: $keycolor1;
+    border-color: transparent;
+    padding-bottom: $padheader;
 }
 
-.navbar-header{
-	padding-bottom: $padheader;
+.navbar-header {
+    padding-bottom: $padheader;
 }
 
 .navbar-inverse .navbar-nav > li > a {
-  color: white;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 14px;
-  padding-top: 25px; //menu item height
-  border-color:$keycolor1;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding-top: 25px; //menu item height
+    border-color: $keycolor1;
 }
 
-.nav-collapse, .nav-collapse.collapse {
-  background: none repeat scroll 0 0 #ff755a;
-  height: 0;
-  overflow: hidden;
-   border-color:$keycolor1;
-
+.nav-collapse,
+.nav-collapse.collapse {
+    background: none repeat scroll 0 0 #ff755a;
+    height: 0;
+    overflow: hidden;
+    border-color: $keycolor1;
 }
 
 .navbar-inverse .navbar-collapse {
-  border-color:$keycolor1;
+    border-color: $keycolor1;
 }
 
-.navbar-toggle{
-	margin-top: 15px;
-	border: 1px solid white;
+.navbar-toggle {
+    margin-top: 15px;
+    border: 1px solid white;
 }
 
 .navbar-inverse .navbar-toggle {
-  border-color: white;
+    border-color: white;
 }
+
+// .navbar > .container{
+// 	margin-left:20px; # space to left of logo
+// }
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.footer-logo{
+  height:100px;
+}
+
+.latest-list li a {
+  color: #eee;
+}
+
+.footer-v1 .footer {
+  padding: 40px 0;  
+  background: #272727;
+}
+
+.footer-v1 .footer h2 {
+  color: #eee;
+  font-size: 18px;
+  font-weight: 200;
+}
+
+/*Link List*/
+.footer-v1 .link-list li {
+  border-top: solid 1px #353535;
+}
+
+.footer-v1 address {
+  color: #eee;
+}
+
+.footer-v1 address {
+  line-height: 23px;
+  font-size: 13px;
+}
+
+
+
+
+.footer-v1 .footer p {
+  color: #eee;
+    font-size: 14px;
+  line-height: 1.6;
+  margin: 10px 0 10px;
+    font-family: $font;
+      box-sizing: border-box;
+        display: block;
+        padding: 0 20px 0 0px;
+
+}
+
+
+/*Block Headline*/
+.headline {
+  display: block;
+  margin: 10px 0 25px 0;
+  border-bottom: 1px dotted #e4e9f0;
+}
+
+
+
+.headline h2, 
+.headline h3, 
+.headline h4 {
+  margin: 0 0 -2px 0;
+  padding-bottom: 5px;
+  display: inline-block;
+  border-bottom: 2px solid $keycolor1;//#72c02c;
+}
+
+
+.link-list a {
+  color: #eee;
+  font-size: 11px;
+  padding: 6px 0px;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
