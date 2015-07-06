@@ -9,14 +9,38 @@ html(ng-app="columbiaWync")
         // build:css app.css
         // bower:css
         // endinject
-        link(rel='stylesheet', href='styles/css/app.css')
+
+        link(rel='stylesheet', href='../bower_components/bootstrap/dist/css/bootstrap.css')
         link(rel='stylesheet', href='bower_components/leaflet/dist/leaflet.css')
+        link(rel='stylesheet', href='styles/css/app.css')
         // endbuild
     body
+        header
+          .navbar.navbar-inverse.navbar-fixed-top
+              .container
+                  .navbar-header
+                    button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                      span.icon-bar
+                      |             
+                      span.icon-bar
+                      |             
+                      span.icon-bar
+                    |           
+                    a.navbar-brand(href='index.html')
+                      img.img.hidden-xs(src='assets/logo_footer.png', )
+                      img.img.visible-xs(src='assets/logo_footer.png') 
+                    
+                    
+                  .navbar-collapse.collapse
+                    ul.nav.navbar-nav.navbar-right
+                      li(class=(active === 'home' ? 'active' : ''))
+                        a(href='index.html') Help         
+                      li(class=(active === 'work' ? 'active' : ''))
+                        a(href='work.html') Project information 
         strong columbiaWync3
         div(ng-view='')
         // build:js app.js
-        // bower:js
+        // bower:js 
         script(src='bower_components/angular/angular.js')
         script(src='bower_components/angular-route/angular-route.js')
         script(src='bower_components/angular-resource/angular-resource.js')
@@ -24,8 +48,10 @@ html(ng-app="columbiaWync")
         script(src='bower_components/angular-animate/angular-animate.js')
         script(src='bower_components/leaflet/dist/leaflet.js')
         script(src='bower_components/angular-leaflet-directive/dist/angular-leaflet-directive.js')
+        script(src='../bower_components/jquery/dist/jquery.js')
+        script(src='../bower_components/bootstrap/dist/js/bootstrap.js')
         // endinject
-        // inject:js
+        // inject:js 
         script(src='modules/static-json-module.js')
         script(src='app.js')
         script(src='views/home/home.js')

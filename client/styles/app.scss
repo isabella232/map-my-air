@@ -1,3 +1,16 @@
+/* ==========================================================================
+   Overall settings
+   ========================================================================== */
+
+$keycolor1: #076ff7;
+$padheader: 10px;
+
+
+/* ==========================================================================
+   Body settings
+   ========================================================================== */
+
+
 body {
   font-family: sans-serif;
 }
@@ -5,4 +18,50 @@ body {
 #leaflet-map { 
 	height: 300px;
 	width: 400px;
+}
+
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+.navbar {
+  background-color: $keycolor1;
+  border-color: transparent;
+  padding-bottom: $padheader;
+
+}
+
+.navbar-header{
+	padding-bottom: $padheader;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14px;
+  padding-top: 25px; //menu item height
+  border-color:$keycolor1;
+}
+
+.nav-collapse, .nav-collapse.collapse {
+  background: none repeat scroll 0 0 #ff755a;
+  height: 0;
+  overflow: hidden;
+   border-color:$keycolor1;
+
+}
+
+.navbar-inverse .navbar-collapse {
+  border-color:$keycolor1;
+}
+
+.navbar-toggle{
+	margin-top: 15px;
+	border: 1px solid white;
+}
+
+.navbar-inverse .navbar-toggle {
+  border-color: white;
 }
