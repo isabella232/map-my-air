@@ -4,15 +4,18 @@
     <div class="col-md-12 col-center">
       <div class="row maintitle">
         <div class="col-md-6">
-          <h1 class="maintitle">{{ vm.name }}</h1>
+          <h1 class="maintitle">{{name }}</h1>
         </div>
         <div class="col-md-6">
           <h2>Data Upload</h2>
           <button type="button" class="btn btn-default">GPX Data</button>
         </div>
       </div>
-      <div class="row"></div>
-      <leaflet defaults="defaults" center="vm.center" id="leaflet-map"></leaflet>
+      <div class="row">
+        <div ng-controller="GoogleMapsController" class="div">
+          <leaflet id="leaflet-map" center="center" layers="layers" markers="markers"></leaflet>
+        </div>
+      </div>
     </div>
   </div>
 </div>

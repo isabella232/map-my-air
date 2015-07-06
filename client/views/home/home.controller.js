@@ -27,23 +27,45 @@ angular.module('columbiaWync')
 		    }
 		}).addTo(promises.leafletMap);
 
-		var CartoDB_Positron = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
-			attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
-			subdomains: 'abcd',
-			maxZoom: 19
-		});
-
-		CartoDB_Positron.addTo(promises.leafletMap);
-
     });
+ 
 
-    angular.extend(vm, {
-      name: 'Columbia University Bike and Exposure Tool',
-      center: {
-        lat: 40.735,
-        lng: -73.96,
-        zoom: 11
-      }
-    });
 
-});
+})
+.controller("GoogleMapsController", [ "$scope", "CartoDbGeoJsonSrvc", function($scope, CartoDbGeoJsonSrvc) {
+			var vm = this;
+            angular.extend($scope, {
+            	name:'Columbia University Bike and Exposure Tool',
+                markers: {
+                    m1: {
+                        lat: 40.735,
+                        lng: -73.96
+                    }
+                },
+                center: {
+                  lat: 40.735,
+                  lng: -73.96,
+                  zoom: 11
+                },
+                layers: {
+                    baselayers: {
+                        googleTerrain: {
+                            name: 'Google Terrain',
+                            layerType: 'TERRAIN',
+                            type: 'google'
+                        },
+                        googleHybrid: {
+	                        name: 'Google Hybrid',
+	                        layerType: 'HYBRID',
+	                        type: 'google'
+	                    },
+                        googleRoadmap: {
+                            name: 'Google Streets',
+                            layerType: 'ROADMAP',
+                            type: 'google'
+                        }
+                    }
+                }
+            });
+        }]);
+
