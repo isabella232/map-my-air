@@ -38,7 +38,7 @@ angular.module('columbiaWync')
     });
 
     angular.extend(vm, {
-      name: 'HomeCtrl',
+      name: 'Columbia University Bike and Exposure Tool',
       center: {
         lat: 40.735,
         lng: -73.96,

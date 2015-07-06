@@ -16,79 +16,77 @@ html(ng-app="columbiaWync")
         // endbuild
     body
         .container
-          .row
             .navbar.navbar-inverse.navbar-fixed-top
-                  .container
-                      .navbar-header
-                        button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
-                          span.icon-bar
-                          |             
-                          span.icon-bar
-                          |             
-                          span.icon-bar
-                        |           
-                        a.navbar-brand(href='index.html')
-                          img.img.hidden-xs(src='assets/logo_footer.png', )
-                          img.img.visible-xs(src='assets/logo_footer.png') 
-                        
-                        
-                      .navbar-collapse.collapse
-                        ul.nav.navbar-nav.navbar-right
-                          li(class=(active === 'home' ? 'active' : ''))
-                            a(href='index.html') Help         
-                          li(class=(active === 'work' ? 'active' : ''))
-                            a(href='work.html') Project information 
-          .row
-            strong columbiaWync3
-            div(ng-view='')
+              .container
+                  .navbar-header
+                    button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                      span.icon-bar
+                      |             
+                      span.icon-bar
+                      |             
+                      span.icon-bar
+                    |           
+                    a.navbar-brand(href='index.html')
+                      img.img.hidden-xs(src='assets/logo_footer.png', )
+                      img.img.visible-xs(src='assets/logo_footer.png') 
+                    
+                    
+                  .navbar-collapse.collapse
+                    ul.nav.navbar-nav.navbar-right
+                      li(class=(active === 'home' ? 'active' : ''))
+                        a(href='index.html') Help         
+                      li(class=(active === 'work' ? 'active' : ''))
+                        a(href='work.html') Project information 
+     
+        div(ng-view='')
 
-.footer-v1
-    .footer
-        .container
-          .row
-            // About
-            .col-sm-3.md-margin-bottom-40
-              a(href='index.html')
-                img#logo-footer.footer-logo(src='http://lorempixel.com/g/100/100/transport')
-              |                         
-              p
-                 | This is a GPS Mapping utility for Columbia University
-            .col-sm-3.md-margin-bottom-40
-            .col-sm-3.md-margin-bottom-40
-              .headline
-                h2 Useful Links
-              |                         
-              ul.list-unstyled.link-list
-                li
-                  a(href='#') Columbia University
-                  i.fa.fa-angle-right
-                |                             
-                li
-                  a(href='#') Lamont
-                  i.fa.fa-angle-right
-                |                             
-                li
-                  a(href='#') Blah blah
-                  i.fa.fa-angle-right
-            .col-sm-3.map-img.md-margin-bottom-40
-              .headline
-                h2 Contact Us
-              |                          
-              |                         
-              address.md-margin-bottom-40
-                | Darby Jack
-                br
-                |                             New York, NY 
-                br
-                |                             Phone: xx 
+        .footer-v1
+            .footer
+                .container
+                  .row
+                    // About
+                    .col-sm-3.md-margin-bottom-40
+                      a(href='index.html')
+                        img#logo-footer.footer-logo(src='http://lorempixel.com/g/100/100/transport')
+                      |                         
+                      p
+                         | This is a GPS Mapping utility for Columbia University
+                    .col-sm-3.md-margin-bottom-40
+                    .col-sm-3.md-margin-bottom-40
+                      .headline
+                        h2 Useful Links
+                      |                         
+                      ul.list-unstyled.link-list
+                        li
+                          a(href='#') Columbia University
+                          i.fa.fa-angle-right
+                        |                             
+                        li
+                          a(href='#') Lamont
+                          i.fa.fa-angle-right
+                        |                             
+                        li
+                          a(href='#') Blah blah
+                          i.fa.fa-angle-right
+                    .col-sm-3.map-img.md-margin-bottom-40
+                      .headline
+                        h2 Contact Us
+                      |                          
+                      |                         
+                      address.md-margin-bottom-40
+                        | Darby Jack
+                        br
+                        |                             New York, NY 
+                        br
+                        |                             Phone: xx 
 
-                br
-                |                             Email: 
-                a(href='xxxx') xxxx@xxxx.com
-                br
+                        br
+                        |                             Email: 
+                        a(href='xxxx') xxxx@xxxx.com
+                        br
 
-                a.tooltips(href='https://twitter.com/zevross', data-toggle='tooltip', data-placement='top', title='', data-original-title='Twitter')
-                  i.fa.fa-twitter.twittercenter
+                        a.tooltips(href='https://twitter.com/zevross', data-toggle='tooltip', data-placement='top', title='', data-original-title='Twitter')
+                          i.fa.fa-twitter.twittercenter
 
         // build:js app.js
         // bower:js 

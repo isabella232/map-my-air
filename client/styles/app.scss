@@ -16,12 +16,40 @@ sans-serif; // "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 body {
     font-family: sans-serif;
-    padding-top: 100px;
+    padding-top: 70px;
 }
 
 #leaflet-map {
-    height: 300px;
-    width: 400px;
+    height: 700px;
+    width: 100%;
+}
+
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+
+h1.maintitle{
+	font-weight:bold;
+	color: #fff;
+	margin-left:75px;
+}
+
+h2{
+	color:white;
+}
+
+.row.maintitle{
+	background-color:#007713;
+	padding: 15px;
+
 }
 /* ==========================================================================
    Header
