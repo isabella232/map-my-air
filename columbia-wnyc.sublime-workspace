@@ -292,26 +292,18 @@
 	"buffers":
 	[
 		{
+			"file": "client/index.jade",
+			"settings":
+			{
+				"buffer_size": 4945,
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "client/views/home/home.jade",
 			"settings":
 			{
-				"buffer_size": 18,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "server/routes.js",
-			"settings":
-			{
-				"buffer_size": 2393,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "client/views/home/home.js",
-			"settings":
-			{
-				"buffer_size": 242,
+				"buffer_size": 597,
 				"line_ending": "Windows"
 			}
 		},
@@ -319,39 +311,47 @@
 			"file": "client/views/home/home.controller.js",
 			"settings":
 			{
-				"buffer_size": 170,
+				"buffer_size": 3177,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "tasks/serve.js",
+			"file": "server/routes.js",
 			"settings":
 			{
-				"buffer_size": 1289,
+				"buffer_size": 4241,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "client/index.html",
+			"file": "client/modules/static-json-module.js",
 			"settings":
 			{
-				"buffer_size": 1186,
+				"buffer_size": 539,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "/D/junk/htmljade/index.jade",
+			"file": "client/styles/app.scss",
 			"settings":
 			{
-				"buffer_size": 840,
-				"line_ending": "Unix"
+				"buffer_size": 3240,
+				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "client/index.jade",
+			"file": "/X/web_development/working/worldcupboth/app/js/controllers/controllers.js",
 			"settings":
 			{
-				"buffer_size": 870,
+				"buffer_size": 7690,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/X/web_development/working/worldcupboth/app/wc_map.html",
+			"settings":
+			{
+				"buffer_size": 2422,
 				"line_ending": "Windows"
 			}
 		}
@@ -768,28 +768,48 @@
 	[
 		"/X/projects/columbia_wnyc/web/columbia-WNYC",
 		"/X/projects/columbia_wnyc/web/columbia-WNYC/client",
+		"/X/projects/columbia_wnyc/web/columbia-WNYC/client/assets",
 		"/X/projects/columbia_wnyc/web/columbia-WNYC/client/bower_components",
+		"/X/projects/columbia_wnyc/web/columbia-WNYC/client/bower_components/angular-leaflet-directive",
+		"/X/projects/columbia_wnyc/web/columbia-WNYC/client/bower_components/angular-leaflet-directive/dist",
+		"/X/projects/columbia_wnyc/web/columbia-WNYC/client/bower_components/angular-leaflet-directive/dist/architecture",
+		"/X/projects/columbia_wnyc/web/columbia-WNYC/client/bower_components/bootstrap/dist",
+		"/X/projects/columbia_wnyc/web/columbia-WNYC/client/bower_components/bootstrap/dist/js",
+		"/X/projects/columbia_wnyc/web/columbia-WNYC/client/bower_components/jquery",
+		"/X/projects/columbia_wnyc/web/columbia-WNYC/client/bower_components/jquery/dist",
+		"/X/projects/columbia_wnyc/web/columbia-WNYC/client/modules",
+		"/X/projects/columbia_wnyc/web/columbia-WNYC/client/styles",
 		"/X/projects/columbia_wnyc/web/columbia-WNYC/client/views",
 		"/X/projects/columbia_wnyc/web/columbia-WNYC/client/views/home",
 		"/X/projects/columbia_wnyc/web/columbia-WNYC/server",
 		"/X/projects/columbia_wnyc/web/columbia-WNYC/server/config",
 		"/X/projects/columbia_wnyc/web/columbia-WNYC/server/config/environment",
 		"/X/projects/columbia_wnyc/web/columbia-WNYC/tasks",
-		"/X/projects/columbia_wnyc/web/columbia-WNYC/tasks/config"
+		"/X/projects/columbia_wnyc/web/columbia-WNYC/tasks/config",
+		"/X/projects/columbia_wnyc/web/columbia-WNYC/uploads"
 	],
 	"file_history":
 	[
-		"/D/junk/htmljade/index.html",
+		"/X/web_development/working/worldcupboth/app/js/directives/directives.js",
+		"/X/web_development/working/worldcupboth/app/js/app.js",
+		"/X/web_development/working/worldcupboth/app/index.html",
+		"/X/projects/columbia_wnyc/web/columbia-WNYC/client/assets/logo_footer.png",
+		"/X/projects/columbia_wnyc/web/columbia-WNYC/bower.json",
+		"/X/projects/columbia_wnyc/web/columbia-WNYC/client/views/home/home.jade",
+		"/X/projects/columbia_wnyc/web/columbia-WNYC/client/views/home/home.html",
+		"/X/projects/columbia_wnyc/web/columbia-WNYC/client/styles/app.scss",
+		"/X/projects/columbia_wnyc/web/columbia-WNYC/client/app.js",
+		"/X/projects/columbia_wnyc/web/columbia-WNYC/client/index.html",
 		"/X/projects/columbia_wnyc/web/columbia-WNYC/client/index.jade",
 		"/D/junk/htmljade/index.jade",
-		"/X/projects/columbia_wnyc/web/columbia-WNYC/client/views/home/home.html",
+		"/X/projects/columbia_wnyc/web/columbia-WNYC/server/routes.js",
+		"/X/projects/columbia_wnyc/web/columbia-WNYC/client/views/home/home.js",
+		"/X/projects/columbia_wnyc/web/columbia-WNYC/client/views/home/home.controller.js",
+		"/D/junk/htmljade/index.html",
 		"/X/projects/columbia_wnyc/web/columbia-WNYC/tasks/watch.js",
 		"/X/projects/columbia_wnyc/web/columbia-WNYC/tasks/jade.js",
 		"/X/zev/zevross_website/app/views/index.jade",
 		"/X/projects/columbia_wnyc/web/columbia-WNYC/server/config/environment/development.js",
-		"/X/projects/columbia_wnyc/web/columbia-WNYC/server/routes.js",
-		"/X/projects/columbia_wnyc/web/columbia-WNYC/client/index.html",
-		"/X/projects/columbia_wnyc/web/columbia-WNYC/client/views/home/home.jade",
 		"/X/projects/columbia_wnyc/web/columbia-WNYC/server/config/environment/index.js",
 		"/X/git_repos/software_notes/cloud_computing/web_server_general.md",
 		"/X/git_repos/software_notes/command_line/vim.md",
@@ -897,16 +917,7 @@
 		"/X/zev/zevross_website/bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss",
 		"/X/zev/new_website/lava_theme/bootstrap3/multipage/index.html",
 		"/X/zev/zevross_website/dist/styles/main.min.css",
-		"/D/junk/New folder (9)/app/views/layouts/_default.jade",
-		"/D/junk/New folder (9)/app/views/index.jade",
-		"/D/junk/New folder (9)/app/views/data/index.json",
-		"/D/junk/New folder (9)/.tmp/styles/main.css",
-		"/D/junk/New folder (9)/app/styles/main.scss",
-		"/D/junk/New folder (9)/.tmp/styles/custom.css",
-		"/D/junk/New folder (9)/app/views/modules/_footer.jade",
-		"/D/junk/New folder (9)/gulp/tasks/watch.js",
-		"/D/junk/New folder (9)/readme.md",
-		"/D/junk/New folder (9)/.tmp/index.html"
+		"/D/junk/New folder (9)/app/views/layouts/_default.jade"
 	],
 	"find":
 	{
@@ -1078,24 +1089,58 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "client/views/home/home.jade",
+					"file": "client/index.jade",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 18,
+						"buffer_size": 4945,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								12,
-								12
+								3777,
+								3777
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Extended.tmTheme",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 6.0,
+						"translation.y": 620.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "client/views/home/home.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 597,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								266,
+								266
 							]
 						],
 						"settings":
@@ -1114,86 +1159,87 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "server/routes.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2393,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1979,
-								1979
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Extended.tmTheme",
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 60.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
 					"buffer": 2,
-					"file": "client/views/home/home.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 242,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								235,
-								235
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Extended.tmTheme",
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
 					"file": "client/views/home/home.controller.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 170,
+						"buffer_size": 3177,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								62,
-								45
+								1837,
+								1837
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Extended.tmTheme",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 20.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "server/routes.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4241,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3820,
+								3820
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Extended.tmTheme",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 43.0,
+						"translation.y": 240.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "client/modules/static-json-module.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 539,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								436,
+								319
 							]
 						],
 						"settings":
@@ -1208,41 +1254,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "tasks/serve.js",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 1289,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Extended.tmTheme",
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -1253,19 +1265,85 @@
 			[
 				{
 					"buffer": 5,
-					"file": "client/index.html",
+					"file": "client/styles/app.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1186,
+						"buffer_size": 3240,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1186,
-								1186
+								961,
+								961
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Extended.tmTheme",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/X/web_development/working/worldcupboth/app/js/controllers/controllers.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7690,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7144,
+								7144
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Extended.tmTheme",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/X/web_development/working/worldcupboth/app/wc_map.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2422,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1936,
+								1846
 							]
 						],
 						"settings":
@@ -1279,77 +1357,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 720.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "/D/junk/htmljade/index.jade",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 840,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								840,
-								0
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Extended.tmTheme",
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "client/index.jade",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 870,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								870,
-								870
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Extended.tmTheme",
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
+					"stack_index": 5,
 					"type": "text"
 				}
 			]
@@ -1383,7 +1394,7 @@
 		"cols":
 		[
 			0.0,
-			0.5,
+			0.726244343891,
 			1.0
 		],
 		"rows":
@@ -1527,7 +1538,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 1,
+	"selected_group": 0,
 	"settings":
 	{
 	},

@@ -3,10 +3,14 @@ div
 		.col-md-12.col-center
 			.row.maintitle
 				.col-md-6
-					h1.maintitle {{name }}
+					h1.maintitle Columbia Bike Exposure Tool
 				.col-md-6
-					h2 Data Upload
-					button(type="button").btn.btn-default GPX Data
+					form.form-horizontal
+						h2.form-signin-heading File info
+						input.input-block-level(type="text", name="riderid", ng-model="riderid")
+						label.checkbox.
+							<input type="checkbox" value="remember-me" /> Previously uploaded
+						button.btn.btn-large.btn-primary(type="submit" ng-click="grabGPX()" ) Do it
 			.row
 				.div(ng-controller='GoogleMapsController')
 					leaflet(id="leaflet-map",  center="center" layers="layers" markers="markers")

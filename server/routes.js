@@ -89,6 +89,7 @@ module.exports = function (app) {
 
   app.route('/gpxroute/:id')
     .get(function(req, res) {
+
       res.send('Get a route by id');
     })
     .put(function(req, res) {
