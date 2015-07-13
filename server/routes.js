@@ -20,7 +20,11 @@ module.exports = function (app) {
       console.log(req.body);
       console.log(req.files);
 
-      parseXmlString(req.files.upload.buffer.toString(), function (err, result) {
+      //TODO validation and santization of user input
+      var name = (req.body.username) ? req.body.username : 'test' + new Date().getTime();
+
+      //Note, the curl request had req.files.upload, while angular uploaded req.files.file
+      parseXmlString(req.files.file.buffer.toString(), function (err, result) {
           //console.dir(result.gpx);
           var trkpts = result.gpx.trk[0].trkseg[0].trkpt;
           var lineString = "LINESTRING(";
@@ -40,10 +44,10 @@ module.exports = function (app) {
               console.log("connected");
 
               //TODO seems like this library should really be supporting promises here...
-              cartodbClient.query("INSERT INTO gpxline (cartodb_id, the_geom, name) VALUES (DEFAULT, ST_GeomFromText('{lineString}',4326),'test{timeStamp}') returning cartodb_id", 
+              cartodbClient.query("INSERT INTO gpxline (cartodb_id, the_geom, name) VALUES (DEFAULT, ST_GeomFromText('{lineString}',4326),'{name}') returning cartodb_id", 
                 {
                   lineString:lineString + ")",
-                  timeStamp:new Date().getTime()
+                  name:name
                 },
                 function(err, data){
                   if(err){
