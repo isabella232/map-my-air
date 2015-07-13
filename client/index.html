@@ -61,25 +61,30 @@
         </div>
       </div>
     </div>
+    <script src="http://maps.google.com/maps/api/js?v=3&amp;sensor=false">                 </script>
     <!-- build:js app.js-->
     <!-- bower:js -->
-    <script src="http://maps.google.com/maps/api/js?v=3&amp;sensor=false"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.js"></script>
+    <script src="bower_components/ng-file-upload/ng-file-upload-all.js"></script>
     <script src="bower_components/leaflet/dist/leaflet.js"></script>
     <script src="bower_components/angular-leaflet-directive/dist/angular-leaflet-directive.js"></script>
-    <script src="../bower_components/jquery/dist/jquery.js"></script>
-    <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <!-- endinject -->
     <script src="http://tombatossals.github.io/angular-leaflet-directive/bower_components/leaflet-plugins/layer/tile/Google.js"></script>
-    <!-- endinject-->
-    <!-- inject:js -->
+    <!-- inject:js  -->
     <script src="modules/static-json-module.js"></script>
     <script src="app.js"></script>
-    <script src="views/home/home.js"></script>
+    <script src="services/leaflet-route.srvc.js"></script>
+    <script src="services/remote-api-stub.rsrc.js"></script>
     <script src="views/home/home.controller.js"></script>
+    <script src="views/home/home.js"></script>
     <!-- endinject-->
     <!-- endbuild-->
   </body>
