@@ -1,63 +1,73 @@
 'use strict';
 
-angular.module('columbiaWync')
-    .controller('HomeCtrl', function($scope, $q, leafletData, CartoDbGeoJsonSrvc) {
+/**
+ * Main controller
+ */
+angular.module('columbiaWync').controller('HomeCtrl', function($timeout, $location, Upload) {
 
+    var vm = this;
+
+    angular.extend(this, {
+    	riderId:null,
+    	file:{},
+    	dynamic:0
+    });
+    
+    vm.queueFile = function(files){
+    	if (files && files.length) {
+            for (var i = 0; i < files.length; i++) {
+                var file = files[i];
+                console.log(file.name);
+                vm.file = file;
+            }
+        }
+    };
+
+    vm.upload = function (isValid) {
+        if (vm.file.name && isValid) {
+        	vm.dynamic = 20;
+            Upload.upload({
+                url: '/gpxroute',
+                fields: {'username': vm.riderId},
+                file: vm.file
+            }).progress(function (evt) {
+                var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
+                console.log('progress: ' + progressPercentage + '% ' + evt.config.file.name);
+                vm.dynamic = 50;
+            }).success(function (data, status, headers, config) {
+            	vm.dynamic = 89;
+            	$timeout(function(){
+            		vm.dynamic = 100;
+            	},150);
+                console.log('file ' + config.file.name + 'uploaded. Response: ' + data.cartodbId);
+                $location.search({routeId:data.cartodbId});
+            }).error(function (data, status, headers, config) {
+            	//TODO we could totally have failure here, need to alert user to failure
+                console.log('error status: ' + status);
+                vm.dynamic = 0;
+            })
+        } else {
+        	//@see http://www.technofattie.com/2014/07/01/using-angular-forms-with-controller-as-syntax.html for dealing with formcontroller with controller as syntax
+        	angular.forEach(vm.form.$error.required, function(field) {
+			    field.$setDirty();
+			});
+        }
+    };
+	         
+})
+/**
+ * Google map controller
+ */
+.controller("GoogleMapsController", function($q, $scope, $route, $routeParams, $location, $timeout,
+												 leafletData, CartoDbGeoJsonSrvc, LeafletRouteSrvc) {
+        //rememebr, using the new controller as syntax requires defining the controller with an alias in the template
         var vm = this;
-        $scope.riderid = 22;
 
-        $scope.grabGPX = function() {
-            $q.all({
-                geoJson: CartoDbGeoJsonSrvc.get({
-                    gpxlineId: $scope.riderid
-                }).$promise,
-                leafletMap: leafletData.getMap('leaflet-map')
-            }).then(function(promises) {
-            	console.log(promises.geoJson);
-                L.geoJson(promises.geoJson, {
-                    style: function(feature) {
-                        var uk = feature.properties.ukpred;
-                        if (uk < 11.7) {
-                            return {
-                                color: "#FFFFB2"
-                            };
-                        } else if (uk > 11.69 && uk < 12.7) {
-                            return {
-                                color: "#FED976"
-                            };
-                        } else if (uk > 12.69 && uk < 13.7) {
-                            return {
-                                color: "#FEB24C"
-                            };
-                        } else if (uk > 13.69 && uk < 14.7) {
-                            return {
-                                color: "#FD8D3C"
-                            };
-                        } else if (uk > 14.69 && uk < 15.7) {
-                            return {
-                                color: "#FC4E2A"
-                            };
-                        } else if (uk > 15.69 && uk < 16.7) {
-                            return {
-                                color: "#E31A1C"
-                            };
-                        } else {
-                            return {
-                                color: "#B10026"
-                            };
-                        }
-                    }
-                }).addTo(promises.leafletMap);
-
-            });
-        };
-
-
-    })
-    .controller("GoogleMapsController", ["$scope", "CartoDbGeoJsonSrvc", function($scope, CartoDbGeoJsonSrvc) {
-        var vm = this;
-        angular.extend($scope, {
+        angular.extend(this, {
             name: 'Columbia University Bike and Exposure Tool',
+            defaults:{
+            	scrollWheelZoom:false
+            },
             markers: {
                 m1: {
                     lat: 40.735,
@@ -87,6 +97,44 @@ angular.module('columbiaWync')
                         type: 'google'
                     }
                 }
+            },
+            geojson:null,
+            //Note: you can call this function manually with angular.element($0).scope().gmc.changeGeojsonStyle(1) to see changes
+            changeGeojsonStyle:function(adjustment){
+            	//placeholder for a function that could be used to update the styling based on wholesale ukpred changes
+            	vm.geojson.setStyle(LeafletRouteSrvc.getAdjustedRouteStyle(adjustment));
             }
         });
-    }])
+
+
+		$scope.$on("$routeUpdate",function(){
+			//dont update route if we dont have an id
+			if(!$routeParams.routeId){
+				return;
+			}
+
+			$q.all({ 
+                geoJson: CartoDbGeoJsonSrvc.get({
+                    gpxlineId: $routeParams.routeId
+                }).$promise,
+                leafletMap: leafletData.getMap('leaflet-map')
+            }).then(function(promises) {
+            	console.log(promises.geoJson);
+                
+                vm.geojson = LeafletRouteSrvc.addRouteStyle(promises.geoJson).addTo(promises.leafletMap);
+            });
+		});
+
+		
+       
+       //if this is the first load, trigger a route update to check if we have to load routeparams.
+       //TODO really? there should be a better way
+       if($routeParams.routeId){
+       		var routeId = $routeParams.routeId;
+       		$location.search({routeId:""});
+       		$timeout(function(){
+       			$location.search({routeId:routeId});
+       		},100);
+       } 
+        
+    });
