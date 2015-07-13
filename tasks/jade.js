@@ -15,17 +15,17 @@ var jade      = require('gulp-jade');
 module.exports = {
 
   index: function () {
-  	/*return gulp.src(['./client/index.jade'])
+  	return gulp.src(['./client/index.jade'])
       .pipe(plumber())
-      .pipe(gulpif(/[.]jade$/, jade().on('error', gutil.log)))
-      .pipe(gulp.dest('./client'));  */
+      .pipe(gulpif(/[.]jade$/, jade({pretty:true}).on('error', gutil.log)))
+      .pipe(gulp.dest('./'));
   },
 
   template: function () {
   	// combine compiled Jade and html template files into 
     // build/template.js
     return gulp.src([
-      './client/index.jade',
+      '!./client/index.jade',
       '!./client/index.html',
       //'./app/**/*.html', 
       './client/views/**/*.jade'],{base: './'})
