@@ -5,12 +5,32 @@ div
 				.col-md-6
 					h1.maintitle Columbia Bike Exposure Tool
 				.col-md-6
-					form.form-horizontal
+					form.form-horizontal(novalidate, name="hc.form", ng-submit="hc.upload(hc.form.$valid)")
 						h2.form-signin-heading File info
-						input.input-block-level(type="text", name="riderid", ng-model="riderid")
+
+						div.form-group(ng-class="{ 'has-error' : hc.form.riderId.$invalid && !hc.form.riderId.$pristine }")
+							label.control-label.col-sm-4(for="riderId") Rider Id: 
+							div.col-sm-8
+								input.form-control(type="text", name="riderId", ng-model="hc.riderId", required, minlength="2", maxlength="256", ng-model-options="{ debounce: 450 }", style="max-width:200px;")
+							div(ng-messages="hc.form.riderId.$error" ng-hide="hc.form.riderId.$pristine" style="color:maroon" role="alert")
+								div(ng-message="required")  Rider id is required
+								div(ng-message="minlength")  Value is too short
+								div(ng-message="maxlength")  Value is too long
+	
+						div.form-group(ng-class="{ 'has-error' : hc.form.fileName.$invalid && !hc.form.fileName.$pristine }")
+							div.col-sm-11.form-inline
+								label.control-label(for="fileName" style="margin-right:13px;") File Name:
+								input.form-control(type="text", name="fileName", ng-model="hc.file.name", required)
+								button.btn.btn.large.btn-primary(ngf-select, ngf-change="hc.queueFile($files)", ngf-multiple="false") Select File
+							div(ng-messages="hc.form.fileName.$error" ng-hide="hc.form.fileName.$pristine" style="color:maroon" role="alert")
+								div(ng-message="required")  File name is required
 						label.checkbox.
 							<input type="checkbox" value="remember-me" /> Previously uploaded
-						button.btn.btn-large.btn-primary(type="submit" ng-click="grabGPX()" ) Do it
+						button.btn.btn-large.btn-primary(type="submit") Do it
+						p
+						progressbar.progress-striped.active(animate="true", ng-hide="hc.dynamic == 0 || hc.dynamic == 100" value="hc.dynamic", type="success", style="width:250px;margin-left:auto;margin-right:auto;")
+							b {{hc.dynamic}}%
+
 			.row
-				.div(ng-controller='GoogleMapsController')
-					leaflet(id="leaflet-map",  center="center" layers="layers" markers="markers")
+				.div(ng-controller='GoogleMapsController as gmc')
+					leaflet(id="leaflet-map", defaults="gmc.defaults", center="gmc.center", layers="gmc.layers", markers="gmc.markers")
