@@ -5,13 +5,17 @@ angular.module('columbiaWync', [
   'ngResource',
   'ngSanitize',
   'ngAnimate',
+  'ngMessages',
+  'ui.bootstrap',
+  'ngFileUpload',
   'leaflet-directive',
-  'staticJSON'
+  'staticJSON',
 ]).config(function ($routeProvider, $locationProvider, $httpProvider) {
 
     $routeProvider
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/',
+        reloadOnSearch:false
       });
 
     $locationProvider.html5Mode(true);
