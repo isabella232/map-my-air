@@ -9,4 +9,4 @@ angular.module('columbiaWync').factory('RemoteApiStub', function($resource) {
 	return $resource("http://jsfiddle.net/echo/jsonp/",{callback: "JSON_CALLBACK"},{
 				query: { method: "JSONP", isArray: false }
 			});
-}
+});
