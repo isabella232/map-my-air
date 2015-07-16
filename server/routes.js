@@ -4,7 +4,6 @@ var config = require('./config/environment');
 var parseXmlString = require('xml2js').parseString;
 //https://github.com/Vizzuality/cartodb-nodejs
 var CartoDB = require('cartodb');
-var cartodbClient = new CartoDB({user: config.cartodb.USER, api_key: config.cartodb.API_KEY});
 
 module.exports = function (app) {
 
@@ -19,6 +18,7 @@ module.exports = function (app) {
     .post(function(req, res) {
       console.log(req.body);
       console.log(req.files);
+      var cartodbClient = new CartoDB({user: config.cartodb.USER, api_key: config.cartodb.API_KEY});
 
       //TODO validation and santization of user input
       var name = (req.body.username) ? req.body.username : 'test' + new Date().getTime();
@@ -66,6 +66,8 @@ module.exports = function (app) {
                     function(err, data){
                       if(err){
                         //TODO
+                        console.log("insert gpxlinepart error");
+                        return;
                       }
 
                       //and now... update the ukpred values based on wync data
@@ -74,7 +76,9 @@ module.exports = function (app) {
                       },
                       function(err,data){
                           if(err){
-                            //TODO
+                            //TODO send back failure to client
+                            console.log("update gpxline error");
+                            return;
                           }
 
                           //data is ready to return as geoson, but that request can be made directly to carto, so just return the id we need
