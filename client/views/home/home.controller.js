@@ -119,6 +119,11 @@ angular.module('columbiaWync').controller('HomeCtrl', function($timeout, $locati
             }
         });
 
+		//add the legend
+		leafletData.getMap('leaflet-map').then(function(leafletMap){
+			LeafletRouteSrvc.addRouteLegend(leafletMap);
+		});
+
 
 		$scope.$on("$routeUpdate",function(){
 			//dont update route if we dont have an id

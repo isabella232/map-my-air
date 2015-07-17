@@ -50,11 +50,21 @@
         };
  	}
 
+
+ 	/**
+ 	 * TODO we should refactor this, so we can add styling, popup behavior separately
+ 	 *
+ 	 */
  	this.addRouteStyle = function(geoJson){
  		var me = this;
 
  		return L.geoJson(geoJson, {
-            style: me.getRouteStyle()
+            style: me.getRouteStyle(),
+            onEachFeature:function (feature, layer) {
+            	//TODO we might want to investigate a plugin like this to disable popups on doubleclick - https://github.com/azavea/Leaflet.favorDoubleClick
+            	//TODO I assume we may end up with a more complicated popup template than this?
+    			layer.bindPopup("<strong>Value:</strong>&nbsp;" + (feature.properties.ukpred || "No data"));
+			}
         });
 	};
 
@@ -75,6 +85,35 @@
         } else {
             return "#B10026";
         }
+ 	};
+
+
+ 	/**
+ 	 * This is right out of the leaflet docs - http://leafletjs.com/examples/choropleth.html
+ 	 *   with the exception that it uses our own color fn and values
+ 	 */
+ 	this.addRouteLegend = function(leafletMap){
+ 		var me = this,
+ 			legend = L.control({position: 'bottomright'});
+
+		legend.onAdd = function (map) {
+
+		    var div = L.DomUtil.create('div', 'info legend'),
+		        grades = [0, 11.7, 12.7, 13.7, 14.7, 15.7, 16.7],
+		        labels = [];
+
+		    // loop through our density intervals and generate a label with a colored square for each interval
+		    for (var i = 0; i < grades.length; i++) {
+		        div.innerHTML +=
+		            '<i style="background:' + me.getChloroplethColor(grades[i] + 1) + '"></i> ' +
+		            grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
+		    }
+
+		    return div;
+		};
+
+		legend.addTo(leafletMap);
+
  	};
 
  });
