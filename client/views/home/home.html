@@ -31,7 +31,7 @@
               </div>
             </div>
             <label class="checkbox"><input type="checkbox" value="remember-me" /> Previously uploaded</label>
-            <button type="submit" class="btn btn-large btn-primary">Do it</button>
+            <button type="submit" ng-dblclick="false" ng-disabled="hc.uploadButtonDisabled" class="btn btn-large btn-primary">Upload</button>
             <p></p>
             <progressbar animate="true" ng-hide="hc.dynamic == 0 || hc.dynamic == 100" value="hc.dynamic" type="success" style="width:250px;margin-left:auto;margin-right:auto;" class="progress-striped active"><b>{{hc.dynamic}}%</b></progressbar>
           </form>

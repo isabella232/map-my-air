@@ -10,6 +10,7 @@ angular.module('columbiaWync').controller('HomeCtrl', function($timeout, $locati
     angular.extend(this, {
     	riderId:null,
     	file:{},
+    	uploadButtonDisabled:false,
     	dynamic:0
     });
     
@@ -24,9 +25,12 @@ angular.module('columbiaWync').controller('HomeCtrl', function($timeout, $locati
     };
 
     vm.upload = function (isValid) {
+    	//prevent double click uploads
+    	vm.uploadButtonDisabled = true;
+
         if (vm.file.name && isValid) {
         	vm.dynamic = 20;
-            Upload.upload({
+            var upload = Upload.upload({
                 url: '/gpxroute',
                 fields: {'username': vm.riderId},
                 file: vm.file
@@ -45,13 +49,22 @@ angular.module('columbiaWync').controller('HomeCtrl', function($timeout, $locati
             	//TODO we could totally have failure here, need to alert user to failure
                 console.log('error status: ' + status);
                 vm.dynamic = 0;
-            })
+            });
+
+            upload.finally(function(){
+            	//regardless of success or error, we renable the upload button
+            	vm.uploadButtonDisabled = false;
+            });
         } else {
         	//@see http://www.technofattie.com/2014/07/01/using-angular-forms-with-controller-as-syntax.html for dealing with formcontroller with controller as syntax
         	angular.forEach(vm.form.$error.required, function(field) {
 			    field.$setDirty();
 			});
+
+        	//renable after invalidation too
+			vm.uploadButtonDisabled = false;
         }
+
     };
 	         
 })

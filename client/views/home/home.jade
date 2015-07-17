@@ -26,7 +26,7 @@ div
 								div(ng-message="required")  File name is required
 						label.checkbox.
 							<input type="checkbox" value="remember-me" /> Previously uploaded
-						button.btn.btn-large.btn-primary(type="submit") Do it
+						button.btn.btn-large.btn-primary(type="submit" ng-dblclick="false" ng-disabled="hc.uploadButtonDisabled") Upload
 						p
 						progressbar.progress-striped.active(animate="true", ng-hide="hc.dynamic == 0 || hc.dynamic == 100" value="hc.dynamic", type="success", style="width:250px;margin-left:auto;margin-right:auto;")
 							b {{hc.dynamic}}%
