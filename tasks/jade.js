@@ -15,7 +15,7 @@ var jade      = require('gulp-jade');
 module.exports = {
 
   index: function () {
-  	return gulp.src(['./client/index.jade'])
+  	return gulp.src(['./client/index.jade'],{base: './'})
       .pipe(plumber())
       .pipe(gulpif(/[.]jade$/, jade({pretty:true}).on('error', gutil.log)))
       .pipe(gulp.dest('./'));
