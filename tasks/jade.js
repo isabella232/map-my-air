@@ -14,6 +14,7 @@ var jade      = require('gulp-jade');
 
 module.exports = {
 
+  //Remember, to use relative file path for gulp.dest, ensure to set the base file path in gulp.src
   index: function () {
   	return gulp.src(['./client/index.jade'],{base: './'})
       .pipe(plumber())
