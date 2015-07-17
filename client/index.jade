@@ -15,7 +15,7 @@ html(ng-app="columbiaWync")
         link(rel='stylesheet', href='styles/css/app.css')
         // endbuild
     body
-        .container
+        .container-fluid
             .navbar.navbar-inverse.navbar-fixed-top
               .container
                   .navbar-header
@@ -38,55 +38,55 @@ html(ng-app="columbiaWync")
                       li(class=(active === 'work' ? 'active' : ''))
                         a(href='work.html') Project information 
      
-        div(ng-view='')
+            div(ng-view='')
 
-        .footer-v1.row
-            .footer
-                .container
-                  .row
-                    // About
-                    .col-sm-3.md-margin-bottom-40
-                      a(href='index.html')
-                        img#logo-footer.footer-logo(src='http://lorempixel.com/g/100/100/transport')
-                      |                         
-                      p
-                         | This is a GPS Mapping utility for Columbia University
-                    .col-sm-3.md-margin-bottom-40
-                    .col-sm-3.md-margin-bottom-40
-                      .headline
-                        h2 Useful Links
-                      |                         
-                      ul.list-unstyled.link-list
-                        li
-                          a(href='#') Columbia University
-                          i.fa.fa-angle-right
-                        |                             
-                        li
-                          a(href='#') Lamont
-                          i.fa.fa-angle-right
-                        |                             
-                        li
-                          a(href='#') Blah blah
-                          i.fa.fa-angle-right
-                    .col-sm-3.map-img.md-margin-bottom-40
-                      .headline
-                        h2 Contact Us
-                      |                          
-                      |                         
-                      address.md-margin-bottom-40
-                        | Darby Jack
-                        br
-                        |                             New York, NY 
-                        br
-                        |                             Phone: xx 
+            .footer-v1.row
+                .footer
+                    .container
+                      .row
+                        // About
+                        .col-sm-3.md-margin-bottom-40
+                          a(href='index.html')
+                            img#logo-footer.footer-logo(src='http://lorempixel.com/g/100/100/transport')
+                          |                         
+                          p
+                             | This is a GPS Mapping utility for Columbia University
+                        .col-sm-3.md-margin-bottom-40
+                        .col-sm-3.md-margin-bottom-40
+                          .headline
+                            h2 Useful Links
+                          |                         
+                          ul.list-unstyled.link-list
+                            li
+                              a(href='#') Columbia University
+                              i.fa.fa-angle-right
+                            |                             
+                            li
+                              a(href='#') Lamont
+                              i.fa.fa-angle-right
+                            |                             
+                            li
+                              a(href='#') Blah blah
+                              i.fa.fa-angle-right
+                        .col-sm-3.map-img.md-margin-bottom-40
+                          .headline
+                            h2 Contact Us
+                          |                          
+                          |                         
+                          address.md-margin-bottom-40
+                            | Darby Jack
+                            br
+                            |                             New York, NY 
+                            br
+                            |                             Phone: xx 
 
-                        br
-                        |                             Email: 
-                        a(href='xxxx') xxxx@xxxx.com
-                        br
+                            br
+                            |                             Email: 
+                            a(href='xxxx') xxxx@xxxx.com
+                            br
 
-                        a.tooltips(href='https://twitter.com/zevross', data-toggle='tooltip', data-placement='top', title='', data-original-title='Twitter')
-                          i.fa.fa-twitter.twittercenter
+                            a.tooltips(href='https://twitter.com/zevross', data-toggle='tooltip', data-placement='top', title='', data-original-title='Twitter')
+                              i.fa.fa-twitter.twittercenter
 
         script(src='http://maps.google.com/maps/api/js?v=3&sensor=false')                  
         
