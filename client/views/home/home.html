@@ -7,34 +7,41 @@
           <h1 class="maintitle">Columbia Bike Exposure Tool</h1>
         </div>
         <div class="col-md-6">
-          <form novalidate="novalidate" name="hc.form" ng-submit="hc.upload(hc.form.$valid)" class="form-horizontal">
-            <h2 class="form-signin-heading">File info</h2>
-            <div ng-class="{ 'has-error' : hc.form.riderId.$invalid &amp;&amp; !hc.form.riderId.$pristine }" class="form-group">
-              <label for="riderId" class="control-label col-sm-4">Rider Id: </label>
-              <div class="col-sm-8">
-                <input type="text" name="riderId" ng-model="hc.riderId" required="required" minlength="2" maxlength="256" ng-model-options="{ debounce: 450 }" style="max-width:200px;" class="form-control"/>
+          <div class="col-md-8 col-md-offset-2">
+            <form novalidate="novalidate" name="hc.form" ng-submit="hc.upload(hc.form.$valid)" class="form-horizontal">
+              <h2 class="form-signin-heading">File info</h2>
+              <div ng-class="{ 'has-error' : hc.form.riderId.$invalid &amp;&amp; !hc.form.riderId.$pristine }" class="form-group">
+                <label for="riderId" class="control-label col-sm-3">Rider Id: </label>
+                <div class="col-sm-9">
+                  <input type="text" name="riderId" ng-model="hc.riderId" required="required" minlength="2" maxlength="256" ng-model-options="{ debounce: 450 }" class="form-control"/>
+                  <div ng-messages="hc.form.riderId.$error" ng-hide="hc.form.riderId.$pristine" style="color:maroon" role="alert">
+                    <div ng-message="required"> Rider id is required</div>
+                    <div ng-message="minlength"> Value is too short</div>
+                    <div ng-message="maxlength"> Value is too long</div>
+                  </div>
+                </div>
               </div>
-              <div ng-messages="hc.form.riderId.$error" ng-hide="hc.form.riderId.$pristine" style="color:maroon" role="alert">
-                <div ng-message="required"> Rider id is required</div>
-                <div ng-message="minlength"> Value is too short</div>
-                <div ng-message="maxlength"> Value is too long</div>
+              <div ng-class="{ 'has-error' : hc.form.fileName.$invalid &amp;&amp; !hc.form.fileName.$pristine }" class="form-group">
+                <label for="fileName" class="control-label col-sm-3">File Name:</label>
+                <div class="col-sm-6">
+                  <input type="text" name="fileName" ng-model="hc.file.name" required="required" class="form-control"/>
+                </div>
+                <div class="col-sm-3">
+                  <button ngf-select="ngf-select" ngf-change="hc.queueFile($files)" ngf-multiple="false" class="btn btn large btn-primary">Select File</button>
+                </div>
+                <div ng-messages="hc.form.fileName.$error" ng-hide="hc.form.fileName.$pristine" style="color:maroon" role="alert" class="col-sm-12">
+                  <div ng-message="required"> File name is required</div>
+                </div>
               </div>
-            </div>
-            <div ng-class="{ 'has-error' : hc.form.fileName.$invalid &amp;&amp; !hc.form.fileName.$pristine }" class="form-group">
-              <div class="col-sm-11 form-inline">
-                <label for="fileName" style="margin-right:13px;" class="control-label">File Name:</label>
-                <input type="text" name="fileName" ng-model="hc.file.name" required="required" class="form-control"/>
-                <button ngf-select="ngf-select" ngf-change="hc.queueFile($files)" ngf-multiple="false" class="btn btn large btn-primary">Select File</button>
+              <div class="form-group">
+                <!--label.checkbox.//input(type="checkbox" value="remember-me") Previously uploaded
+                -->
+                <button type="submit" ng-dblclick="false" ng-disabled="hc.uploadButtonDisabled" class="btn btn-large btn-primary">Upload</button>
               </div>
-              <div ng-messages="hc.form.fileName.$error" ng-hide="hc.form.fileName.$pristine" style="color:maroon" role="alert">
-                <div ng-message="required"> File name is required</div>
-              </div>
-            </div>
-            <label class="checkbox"><input type="checkbox" value="remember-me" /> Previously uploaded</label>
-            <button type="submit" ng-dblclick="false" ng-disabled="hc.uploadButtonDisabled" class="btn btn-large btn-primary">Upload</button>
-            <p></p>
-            <progressbar animate="true" ng-hide="hc.dynamic == 0 || hc.dynamic == 100" value="hc.dynamic" type="success" style="width:250px;margin-left:auto;margin-right:auto;" class="progress-striped active"><b>{{hc.dynamic}}%</b></progressbar>
-          </form>
+              <p></p>
+              <progressbar animate="true" ng-hide="hc.dynamic == 0 || hc.dynamic == 100" value="hc.dynamic" type="success" style="width:250px;margin-left:auto;margin-right:auto;" class="progress-striped active"><b>{{hc.dynamic}}%</b></progressbar>
+            </form>
+          </div>
         </div>
       </div>
       <div class="row">
