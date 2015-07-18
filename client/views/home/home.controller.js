@@ -81,12 +81,12 @@ angular.module('columbiaWync').controller('HomeCtrl', function($timeout, $locati
             defaults:{
             	scrollWheelZoom:false
             },
-            markers: {
+            markers: null, /*{
                 m1: {
                     lat: 40.735,
                     lng: -73.96
                 }
-            },
+            },*/
             center: {
                 lat: 40.735,
                 lng: -73.96,
