@@ -25,7 +25,7 @@ var toDelete = [];
 
 module.exports = function (done) {
   runSequence(
-    ['clean:dist', 'sass'],
+    ['clean:dist', 'sass', 'jade-index'],
     ['usemin', 'copy:dist'],
     ['scripts', 'cssmin'],
     'rev',
@@ -48,13 +48,19 @@ gulp.task('copy:dist', function () {
   var main = gulp.src(['server/**/*', 'package.json'], { base: './' });
   var assets = gulp.src('client/assets/**/*', { base: './' });
 
-  return sq({ objectMode: true }, main, assets)
+  //Added the bower components folder, since many of our custom added resources have dependencies that are relative to their bower folders
+  var bowerComponents = gulp.src('client/bower_components/**/*',{base: './'});
+
+  return sq({ objectMode: true }, main, assets, bowerComponents)
     .pipe(gulp.dest('dist/'));
 });
 
 gulp.task('usemin', ['inject'], function () {
   return gulp.src('client/index.html')
     .pipe(plumber())
+    //note, unfortunately, cssRebaseUrls doesnt get us all the way from relative references in the css files, to a fully working concatenated version
+    //    with the right, rewritten urls. assets relative to the bower_components files are rewritten, but there is no bower_component directory, unless
+    //       we manually move it over, so hence, the above copy:dist addition of bower_components
     .pipe(usemin({ css: [cssRebaseUrls({ root: 'client' }), 'concat'] }))
     .pipe(gulp.dest('dist/client/'));
 });
@@ -102,7 +108,9 @@ gulp.task('rev', function () {
     }
   });
 
-  return gulp.src('dist/client/**')
+  //note, that we exlude the bower_components directory, since we dont want to rev that entire directory
+  //@see for excluding directories in globs - https://github.com/gulpjs/gulp/issues/165
+  return gulp.src(['dist/client/**', '!dist/client/{bower_components,bower_components/**}'])
     .pipe(rev.revision())
     .pipe(gulp.dest('dist/client/'));
 });
