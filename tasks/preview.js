@@ -17,6 +17,6 @@ var openOpts = {
 module.exports = function () {
   process.env.NODE_ENV = 'production';
   require('../dist/server/server');
-  return gulp.src('client/index.html')
-    .pipe(open('', openOpts));
+  return gulp.src('client/index.html');
+    //.pipe(open('', openOpts));
 };
