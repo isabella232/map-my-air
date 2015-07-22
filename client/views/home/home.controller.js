@@ -137,7 +137,10 @@ angular.module('columbiaWync').controller('HomeCtrl', function($timeout, $locati
                 }).$promise,
                 leafletMap: leafletData.getMap('leaflet-map')
             }).then(function(promises) {
-            	console.log(promises.geoJson);
+            	//first if we've got a valid route, clear the existing route if we have one
+                if(vm.geojson){
+                    promises.leafletMap.removeLayer(vm.geojson);    
+                }
                 
                 vm.geojson = LeafletRouteSrvc.addRouteStyle(promises.geoJson).addTo(promises.leafletMap);
             });
