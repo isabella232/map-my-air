@@ -1,0 +1,38 @@
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+.l-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+    z-index: 100;
+}
+
+.l-cover.is-hidden {
+    display: none;
+}
+
+.progress {
+    height: 150px;
+    padding: 35px;
+    width: 35%;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.progress-bar {
+    display: block;
+    height: 100%;
+    transition: width 250ms linear;
+    background-color: lightgreen;
+}
