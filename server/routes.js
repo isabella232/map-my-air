@@ -4,6 +4,7 @@ var config = require('./config/environment');
 var parseXmlString = require('xml2js').parseString;
 //https://github.com/Vizzuality/cartodb-nodejs
 var CartoDB = require('cartodb');
+var cors = require('cors');
 
 module.exports = function (app) {
 
@@ -15,9 +16,13 @@ module.exports = function (app) {
    * TODO time to move this function to its own function class export
    */
   app.route('/gpxroute')
-    .post(function(req, res) {
+    .options(cors())
+    .post(cors(), function(req, res) {
       console.log(req.body);
       console.log(req.files);
+      // debug
+      return res.json({cartodbId: 99});
+      // debug
       var cartodbClient = new CartoDB({user: config.cartodb.USER, api_key: config.cartodb.API_KEY});
 
       //TODO validation and santization of user input
