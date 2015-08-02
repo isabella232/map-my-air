@@ -8,3 +8,5 @@ docs/
 .DS_Store
 columbia-wnyc.sublime-project
 columbia-wnyc.sublime-workspace
+*.swp
+*~
