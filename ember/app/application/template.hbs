@@ -1,0 +1,8 @@
+<header>
+    {{file-input}}<br>
+    <button {{action 'upload'}} disabled={{uploadDisabled}}>upload</button>
+</header>
+<div style="position: relative;">
+{{upload-progress progress=progress}}
+{{outlet}}
+</div>
