@@ -1,0 +1,18 @@
+{{#if showButtons}}
+<div class="btn-group">
+  <div class="text text--medium text--semi flush">
+    Share this map
+  </div>
+  {{#facebook-sharer tagName="button" class="btn btn--circle"}}
+    <svg class="icon--facebook">
+      <use xlink:href="/static/img/defs.svg#facebook"></use>
+    </svg>
+  {{/facebook-sharer}}
+
+  {{#twitter-share tagName="button" class="btn btn--circle"}}
+    <svg class="icon--twitter">
+      <use xlink:href="/static/img/defs.svg#twitter"></use>
+    </svg>
+  {{/twitter-share}}
+</div>
+{{/if}}

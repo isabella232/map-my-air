@@ -1,8 +1,46 @@
-<header>
-    {{file-input}}<br>
-    <button {{action 'upload'}} disabled={{uploadDisabled}}>upload</button>
+<header class="l-full">
+  <div class="l-banner">
+    <div class="l-constrained">
+      <div class="l-centervertically l-centervertically--left"> 
+        <div class="text text--white text--heavy">
+          <h2 class="h1 flush h1--xlarge">Polluted Routes</h2>
+          <p class="h1">from</p>
+        </div>
+        <!-- .text -->
+        <svg class="icon--wnyc">
+          <use xlink:href="/static/img/defs.svg#wnyc"></use>
+        </svg>
+      </div>
+      <!-- .l-constrained -->
+    </div>
+  </div>
+  <!-- .l-banner -->
 </header>
-<div style="position: relative;">
-{{upload-progress progress=progress}}
-{{outlet}}
+
+<div class="l-constrained">
+  <div class="text flush">
+    <div class="text-body">
+      <p>Find out how air pollution levels vary throughout the city based on the time of your route. With GPX files from apps like Strava or Runkeeper, you can upload your run or ride below.</p>
+      <p>This model is an approximation of the data currently being collected by Columbia University and WNYC&apos;s Biking and Breathing study. Your anonymous results from this site will be compared to those in the study.</p>  
+
+      {{#accordion-dropdown}}
+        <div class="text flush">
+          <p>Some instructions go here.</p>
+        </div>
+      {{/accordion-dropdown}}
+
+      <div class="l-split flush">
+        {{upload-controls action='upload' progress=progress}}
+
+        {{share-buttons route=currentRouteName}}
+      </div>
+      <!-- .l-split -->
+
+    </div>
+  </div>
+  <div style="position: relative;">
+    {{upload-progress progress=progress}}
+
+    {{outlet}}
+  </div>
 </div>
