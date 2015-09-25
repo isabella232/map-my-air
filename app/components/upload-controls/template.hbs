@@ -1,0 +1,11 @@
+<input type="file" id="fileInput">
+
+<div class="btn-group btn-group--withvr">
+  {{#if hasFile}}
+      <span class="text text--medium flush">{{fileName}}</span>
+      <button {{action 'chooseFile'}} class="btn" disabled={{uploadDisabled}}>Choose New File</button>
+      <button {{action 'upload'}} class="btn btn--blue" disabled={{uploadDisabled}}>Upload</button>
+  {{else}}
+    <button {{action 'chooseFile'}} class="btn">Upload your biking data</button>
+  {{/if}}
+</div>

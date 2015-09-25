@@ -18,6 +18,10 @@
     display: none;
 }
 
+.l-constrained {
+  position: relative;
+}
+
 .progress {
     height: 150px;
     padding: 35px;
@@ -36,3 +40,163 @@
     transition: width 250ms linear;
     background-color: lightgreen;
 }
+
+.l-banner {
+  height: 300px;
+  background-image: url(http://dev.wnyc.net:4569/media/CACHE/6040946168_18c17558a7_o.jpg);
+  background-position: center -162px;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: black;
+
+  /* cut off overlapping gradient*/
+  overflow: hidden;
+  position: relative;
+}
+
+.l-banner > * {
+  height: 100%;
+}
+
+.l-banner:before {
+  content: '';
+  z-index: 0;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  max-width: 1200px; /* width of background-image */
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: 120% 300%;
+
+  background-image: rgba(0,0,0,0);
+  background-image: -moz-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 26%, rgba(0,0,0,1) 47%, rgba(0,0,0,1) 100%);
+  background-image: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(0,0,0,0)), color-stop(26%, rgba(0,0,0,0.2)), color-stop(47%, rgba(0,0,0,1)), color-stop(100%, rgba(0,0,0,1)));
+  background-image: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 26%, rgba(0,0,0,1) 47%, rgba(0,0,0,1) 100%);
+  background-image: -o-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 26%, rgba(0,0,0,1) 47%, rgba(0,0,0,1) 100%);
+  background-image: -ms-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 26%, rgba(0,0,0,1) 47%, rgba(0,0,0,1) 100%);
+  background-image: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 26%, rgba(0,0,0,1) 47%, rgba(0,0,0,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=1 );
+}
+
+#header {
+  margin-bottom: 0;
+}
+
+.l-constrained.ember-application {
+  max-width: none;
+  padding: 0;
+}
+
+.icon--wnyc {
+  fill: white;
+  width: 160px;
+  height: 65px;
+}
+
+.icon--facebook {
+  fill: #1863BB;
+  height: 20px;
+  width: 20px;
+  vertical-align: middle;
+}
+
+.icon--twitter {
+  fill: #4A90E2;
+  height: 20px;
+  width: 20px;
+  vertical-align: middle;
+}
+
+.l-centervertically {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.l-centervertically--left {
+  align-items: flex-start;
+}
+
+.h1--xlarge {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.upload-controls {}
+.upload-controls > input[type=file] {
+  display: none;
+}
+
+.accordion--blank {
+  background-color: transparent;
+}
+
+.accordion--blank > .accordion-header {
+  padding-left: 0;
+  padding-right: 0;
+  background-color: transparent;
+}
+
+.accordion--blank > .accordion-header:after {
+  content: none;
+}
+
+.icon--carat {
+  fill: #128cf4;
+  height: 11px;
+  width: 10px;
+}
+
+.icon--carat--down {
+  transform: rotate(90deg);
+}
+
+.icon--carat--up {
+  transform: rotate(-90deg);
+}
+
+.btn[disabled] {
+  cursor: not-allowed;
+  opacity: 0.25;
+}
+
+.btn[disabled]:hover {
+  border-color: rgba(136,136,136,0.5);
+  color: #888;
+}
+
+.btn.btn--blue[disabled]:hover {
+  color: white;
+  background-color: #128cf4;
+  border-color: #128cf4;
+}
+
+.info {
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+.info h4 {
+    margin: 0 0 5px;
+    color: #777;
+}
+.legend {
+    line-height: 18px;
+    color: #555;
+}
+.legend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.7;
+}
+
