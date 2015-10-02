@@ -8,7 +8,7 @@ const {
 } = Ember;
 
 export default Component.extend({
-  classNames: ['upload-controls', 'medium-only'],
+  classNames: ['upload-controls'],
   uploadDisabled: Ember.computed.bool('progress'),
 
   didInsertElement() {
