@@ -3,12 +3,11 @@ import EmberUploader from 'ember-uploader';
 import config from 'polluted-routes/config/environment';
 
 const {
-  dbHost,
-  dbNamespace
+  host
 } = config;
 
 export default Ember.Mixin.create({
   uploader: EmberUploader.Uploader.create({
-    url: `${dbHost}/${dbNamespace}/gpxroute`
+    url: `${host}/gpxroute`
   })
 })
