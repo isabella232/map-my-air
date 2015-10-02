@@ -25,7 +25,7 @@ module.exports = function(environment) {
       'font-src': "'self' http://fonts.gstatic.com",
       'style-src': "'self' 'unsafe-inline' fonts.googleapis.com"
     },
-    dbHost: 'http://columbia-wnyc.cartodb.com',
+    dbHost: 'http://ec2-52-27-37-89.us-west-2.compute.amazonaws.com',
     dbNamespace: 'api/v2/sql'
   };
 
