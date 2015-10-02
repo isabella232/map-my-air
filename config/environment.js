@@ -19,12 +19,14 @@ module.exports = function(environment) {
         rootElement: '#ember'
     },
     contentSecurityPolicy: {
-        'connect-src': 'ws://dev.wnyc.net:* *.cartodb.com dev.wnyc.net:*',
-        'img-src': "'self' *.googleapis.com *.gstatic.com *.google.com dev.wnyc.net:*",
-        'script-src': "'self' maps.gstatic.com *.googleapis.com *.google.com dev.wnyc.net:*",
-        'font-src': "'self' http://fonts.gstatic.com",
-        'style-src': "'self' 'unsafe-inline' fonts.googleapis.com"
-    }
+      'connect-src': 'ws://dev.wnyc.net:* *.cartodb.com dev.wnyc.net:*',
+      'img-src': "'self' *.googleapis.com *.gstatic.com *.google.com dev.wnyc.net:*",
+      'script-src': "'self' maps.gstatic.com *.googleapis.com *.google.com dev.wnyc.net:*",
+      'font-src': "'self' http://fonts.gstatic.com",
+      'style-src': "'self' 'unsafe-inline' fonts.googleapis.com"
+    },
+    dbHost: 'http://columbia-wnyc.cartodb.com',
+    dbNamespace: 'api/v2/sql'
   };
 
   if (environment === 'development') {
