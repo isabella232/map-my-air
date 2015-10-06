@@ -26,6 +26,8 @@ module.exports = function(environment) {
       'style-src': "'self' 'unsafe-inline' fonts.googleapis.com"
     },
     host: 'http://ec2-52-27-37-89.us-west-2.compute.amazonaws.com',
+    cartoHost: 'http://columbia-wnyc.cartodb.com',
+    cartoNamespace: 'api/v2/sql'
   };
 
   if (environment === 'development') {
