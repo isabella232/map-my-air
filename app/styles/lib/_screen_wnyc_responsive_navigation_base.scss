@@ -1,0 +1,240 @@
+.navigation-open #full-page-viewport-wrapper {
+  overflow: hidden;
+}
+
+  #navigation-menu
+, #subnavigation-menu
+{
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+#navigation-menu {
+  position: fixed;
+  left: -100%;
+  z-index: 9000;
+}
+
+#navigation-menu, #navigation-menu * {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#subnavigation-menu {
+  position: absolute;
+  left: 200%;
+  background: black;
+}
+
+  #navigation-items-wrapper
+, #subnavigation-menu
+{
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.open-nav-site-overlay {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 9000;
+}
+
+.navigation-open .open-nav-site-overlay {
+  display: block;
+}
+
+.navigation-open #navigation-menu,
+.navigation-open #full-page-transforms-wrapper
+{
+  -webkit-transform: translate3d(100%, 0, 0);
+     -moz-transform: translate3d(100%, 0, 0);
+      -ms-transform: translate3d(100%, 0, 0);
+          transform: translate3d(100%, 0, 0);
+}
+
+.subnavigation-open #navigation-menu
+{
+  -webkit-transform: translate3d(0, 0, 0);
+     -moz-transform: translate3d(0, 0, 0);
+      -ms-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+.navigation-open #subnavigation-menu {
+  -webkit-transform: translate3d(-100%, 0, 0);
+     -moz-transform: translate3d(-100%, 0, 0);
+      -ms-transform: translate3d(-100%, 0, 0);
+          transform: translate3d(-100%, 0, 0);
+}
+
+#navigation-menu .close-button {
+  color: white;
+  height: 56px;
+  width: 56px;
+  font-size: 35px;
+  line-height: 56px;
+  cursor: pointer;
+}
+
+#navigation-menu li {
+  padding: 0;
+  display: table-row;
+}
+
+#navigation-items-wrapper {
+  height: 100%;
+  width: 100%;
+  background: black;
+}
+
+#navigation-items {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: table;
+  width: 100%;
+}
+
+#navigation-items li {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 1.3em;
+}
+
+
+@media screen and (min-width:900px) {
+  #navigation-items li .js-launch-search,
+  #navigation-items li.secondary .donation,
+  #navigation-items li.secondary a.user-login,
+  #navigation-items li.secondary a.user-logout {
+    display: none !important;
+  }
+}
+
+#navigation-items .secondary a.user-logout,
+#navigation-items .secondary a.user-login {
+  opacity: 1;
+}
+
+#navigation-items .secondary a label {
+  cursor: pointer;
+}
+
+#navigation-items li a {
+  color: white;
+  text-decoration: none;
+  display: table-cell;
+  vertical-align: middle;
+  height: 3.9em;
+  padding: 0 0 0 1.25em;
+  border-left: 4px solid transparent;
+  background-color: transparent;
+  position: relative;
+}
+
+#navigation-items li a:hover {
+  background: rgb(0,0,0);
+  background: rgba(0,0,0,0.4); /* Transparent background in supporting browsers */
+}
+
+#navigation-items li.has-subnav i {
+  float: right;
+  margin-right: .5em;
+  position: relative;
+  top: 2px;
+  font-size: 20px;
+  transform:rotate(45deg);
+  -ms-transform:rotate(45deg);
+  -webkit-transform:rotate(45deg);
+}
+
+#navigation-items .secondary {
+  font-size: .95em;
+}
+
+#navigation-items .secondary a {
+  padding: 0 0 0 1.7em;
+  height: 3.2em;
+}
+
+#navigation-items .secondary.two-line-title a {
+  height: 5.5em;
+}
+
+#subnavigation-menu ul {
+  margin: 0;
+  height: auto;
+  min-height: 100%;
+}
+
+#subnavigation-menu li {
+  display: table-row;
+}
+
+#subnavigation-menu .loading, /* loading message */
+#subnavigation-menu li h4, /* title */
+#subnavigation-menu li a {
+  display: table-cell;
+  vertical-align: middle;
+  height: 35px;
+  width: 280px;
+  padding: 0 2em;
+  color: white;
+}
+
+#subnavigation-menu li a h4 {
+  color: #4a4a4a;
+}
+
+#subnavigation-menu li a:hover {
+  text-decoration: none;
+  background: rgb(0,0,0);
+  background: rgba(0,0,0,0.5); /* Transparent background in supporting browsers */
+}
+
+#navigation-photo-credit {
+  display: none;
+}
+
+/*
+  IE 8 & 9 Overrides
+
+  IE 8 gets the base mobile view because it doesn't support media
+  queries. Additionally, transforms are not supported and so positioning
+  must happen with left/right/top/bottom properties.
+
+  IE 9 is affected by media queries (and therefore adjusts between
+  mobile/desktop views) but doesn't support animated or 3D transforms and
+  so elements likewise get positioned with the CSS positioning properties.
+*/
+
+  html.lte-ie8.navigation-open    #full-page-transforms-wrapper
+, html.lte-ie8.navigation-open    #navigation-menu
+, html.ie9.navigation-open        #navigation-menu
+, html.lte-ie8.subnavigation-open #full-page-transforms-wrapper
+, html.lte-ie8.subnavigation-open #subnavigation-menu
+{
+  left: 0;
+}
+
+  html.ie9.navigation-open    #full-page-transforms-wrapper
+, html.ie9.subnavigation-open #subnavigation-menu
+{
+  left: 280px;
+}
+
+html.ie9.subnavigation-open #full-page-transforms-wrapper {
+  left: 560px;
+}
+
+html.ie9.navigation-open #subnavigation-menu {
+  display: none;
+}
+
+html.ie9.navigation-open.subnavigation-open #subnavigation-menu {
+  display: block;
+}

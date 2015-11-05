@@ -4,7 +4,7 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'polluted-routes',
     environment: environment,
-    baseURL: '/polluted-routes/',
+    baseURL: '/',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
@@ -16,14 +16,14 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-        rootElement: '#ember'
+      rootElement: '#ember'
     },
     contentSecurityPolicy: {
-      'connect-src': 'ws://dev.wnyc.net:* *.cartodb.com dev.wnyc.net:*',
-      'img-src': "'self' *.googleapis.com *.gstatic.com *.google.com dev.wnyc.net:*",
-      'script-src': "'self' maps.gstatic.com *.googleapis.com *.google.com dev.wnyc.net:*",
-      'font-src': "'self' http://fonts.gstatic.com",
-      'style-src': "'self' 'unsafe-inline' fonts.googleapis.com"
+      'connect-src': 'ws://dev.wnyc.net:* *.cartodb.com',
+      'img-src': "'self' *.googleapis.com *.gstatic.com *.google.com *.wnyc.org",
+      'script-src': "'self' maps.gstatic.com *.googleapis.com *.google.com media.wnyc.org dev.wnyc.net:*",
+      'font-src': "'self' http://fonts.gstatic.com data: media.wnyc.org",
+      'style-src': "'self' 'unsafe-inline' fonts.googleapis.com cloud.typography.com media.wnyc.org"
     },
     host: 'http://ec2-52-27-37-89.us-west-2.compute.amazonaws.com',
     cartoHost: 'http://columbia-wnyc.cartodb.com',

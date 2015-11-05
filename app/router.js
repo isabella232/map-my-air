@@ -9,6 +9,7 @@ var Router = Ember.Router.extend({
 Router.map(function() {
   //this.route('index', {path: '/'})
   this.route('view', {path: ':bikeRoute_id'})
+  this.route('faq', {path: '/faq'})
 });
 
 export default Router;
