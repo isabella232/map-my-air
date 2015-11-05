@@ -1,0 +1,152 @@
+// must come first as per CSS spec
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,300,700);
+//
+
+@import "lib/screen_wnyc_responsive_header_base";
+@import "lib/screen_wnyc_responsive_navigation_base";
+@import "lib/screen_wnyc_responsive_header_medium";
+@import "lib/screen_wnyc_responsive_navigation_medium";
+@import "lib/footer_wnyc";
+
+
+@import "compass";
+@import "lib/normalize";
+
+// the flexbox library brings in mixins to generate cross-browser flexbox support
+// Basically this will use:
+//
+// * Fallback, old syntax (IE10, Safari, mobile webkit browsers)
+// * Prefixed standard syntax (Chrome)
+// * Final standards syntax (FF, IE11, Opera 12.1)
+//
+// all mixins follow the format property-name(argument);
+// so to genrate justify-content: center; for an element do 
+// @include justify-content(center); et volia.
+@import "lib/flexbox";
+
+// brings in some helpful extend-only selectors
+@import "lib/utils";
+
+@import "vars";
+@import "base";
+@import "z-index";
+@import "layout";
+@import "utilities";
+@import "box";
+@import "text";
+@import "buttons";
+@import "tabs";
+@import "badges";
+@import "icons";
+@import "list";
+@import "dropdown";
+@import "panel";
+@import "forms";
+@import "slideshow";
+@import "videoplayer";
+@import "figure";
+@import "accordion";
+@import "chunks";
+@import "state";
+@import "pagination";
+@import "local-to-project";
+
+@import "ads";
+
+// LEGACY CODE
+@import "legacy-crowdsourcing";
+@import "legacy-stream-widget";
+@import "legacy-nav-menu";
+
+// @import "legacy-slideshow";
+// not going to implement imagesLoaded for legacy slideshows
+#main .crowd-results img,
+#main .storyslide > img {
+    opacity: 1;
+}
+
+// override for footer logo lockup
+// production CSS does not use border-box: box-sizing
+// so widths of lock up logos need to add in padding
+#footer_container .footer_copyright .nypr_lockup ul li {
+    width: 90px;
+}
+
+
+/***
+ * Molecules:
+ * Let's build some molecules using atoms
+ */
+
+/**
+ * Facebook Button:
+ *      @example
+ *      button.btn.btn--gray.btn--circle
+ *          i.fa.fa-facebook
+ */
+
+/**
+ * Listen Button:
+ *      @example
+ *      button.btn.btn--pink.btn--large.btn--icon
+ *          <i class="fa fa-play"></i> Listen
+ */
+
+/**
+ * Share Button Group:
+ *      @example
+ *      .btn-group
+ *          button.btn.btn--circle
+ *              i.fa.fa-facebook
+ *          button.btn.btn--circle
+ *              i.fa.fa-twitter
+ *          button.btn.btn--circle
+ *              i.fa.fa-envelope
+ */
+
+/**
+ * Featured Audio Button Group:
+ *      @example
+ *      .btn-group
+ *          button.btn.btn--pink.btn--large.btn--icon
+ *              <i class="fa fa-play"></i> Listen
+ *          button.btn.btn--gray.btn--icon
+ *              <i class="fa fa-play"></i> Queue
+ *          button.btn.btn--gray.btn--icon.btn--circle
+ *              <i class="fa fa-ellipsis-h"></i>
+ */
+
+/***
+ * Organisms:
+ * Put the molecules together and make them something real.
+ */
+
+/**
+ * Story Header:
+ * Uses a flag object, a header element, and a split layout space to create
+ * a header organism.  All of these are wrapped in a background image space.
+ *
+ *      @example
+ *      .l-bgimg
+ *          .flag
+ *              a.flag-image.inherit(href="")
+ *                  img.badge.badge-small(src="http://www.fillmurray.com/40/40")
+ *              .flag-body
+ *                  a.inherit(href="") Bill Murray Show <i class="fa fa-icon fa-angle-right"></i>
+ *          h1.h2 BM's Greatest Hits
+ *          .l-split
+ *              .btn-group
+ *                  button.btn.btn--pink.btn--large.btn--icon
+ *                      <i class="fa fa-play"></i> Listen
+ *                  button.btn.btn--gray.btn--icon
+ *                      <i class="fa fa-play"></i> Queue
+ *                  button.btn.btn--gray.btn--icon.btn--circle
+ *                      <i class="fa fa-ellipsis-h"></i>
+ *              .btn-group
+ *                  button.btn.btn--gray.btn--circle
+ *                      i.fa.fa-facebook
+ *                  button.btn.btn--gray.btn--circle
+ *                      i.fa.fa-twitter
+ *                  button.btn.btn--gray.btn--circle
+ *                      i.fa.fa-envelope
+ */

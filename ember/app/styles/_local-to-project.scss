@@ -11,15 +11,37 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.25);
-    z-index: 100;
+    z-index: 1000;
+}
+
+.l-cover--fixed {
+  position: fixed;
 }
 
 .l-cover.is-hidden {
     display: none;
 }
 
+.is-openmodal {
+  overflow: hidden;
+}
+
 .l-constrained {
   position: relative;
+}
+
+.l-constrained--white {
+  background-color: #f1f1f1; 
+}
+
+.l-constrained--scroll {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.l-maxheight820 {
+  max-height: 820px;
+  height: 90%;
 }
 
 .progress {
@@ -43,7 +65,7 @@
 
 .l-banner {
   height: 300px;
-  background-image: url(http://dev.wnyc.net:4569/media/CACHE/6040946168_18c17558a7_o.jpg);
+  background-image: url(/assets/images/6040946168_18c17558a7_o.jpg);
   background-position: center -162px;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -92,9 +114,10 @@
 }
 
 .icon--wnyc {
-  fill: white;
+  fill: black;
   width: 160px;
   height: 65px;
+  vertical-align: middle;
 }
 
 .icon--facebook {
@@ -116,10 +139,30 @@
   height: 100%;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .l-centervertically--left {
   align-items: flex-start;
+}
+
+.l-flexspread {
+  display: flex;
+  justify-content: space-around;
+  padding-left: 1em;
+  padding-right: 1em;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.l-flexspread > * {
+  flex: 1 1 160px;
+}
+
+@media screen and (min-width: 860px) {
+  .l-flexspread > * {
+    width: auto;
+  }
 }
 
 .h1--xlarge {
@@ -188,6 +231,12 @@
     margin: 0 0 5px;
     color: #777;
 }
+
+.info-label {
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
 .legend {
     line-height: 18px;
     color: #555;
@@ -200,3 +249,16 @@
     opacity: 0.7;
 }
 
+.btn.btn--bluetext {
+  color: #128cf4;
+}
+
+.logo {
+  display: inline-block;
+  max-width: 160px;
+}
+
+.map {
+  position: relative;
+  margin-bottom: 2rem;
+}

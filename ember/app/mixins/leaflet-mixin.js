@@ -43,17 +43,27 @@ export default Ember.Mixin.create({
     })
   },
   addRouteLegend(map) {
-    var legend = L.control({position: 'bottomright'})
+    const legend = L.control({position: 'bottomright'})
 
     function onAdd() {
-      var div = L.DomUtil.create('div', 'info legend'),
-        grades = [0, 11.7, 12.7, 13.7, 14.7, 15.7, 16.7]
+      const div = L.DomUtil.create('div', 'info legend')
+      const grades = [0, 11.7, 12.7, 13.7, 14.7, 15.7, 16.7]
+      const units = document.createElement('div')
+      units.className = 'info-label'
+      units.innerHTML = '<a href="#">PM<sub>2.5</sub> &micro;g/m<sup>3</sup></a>'
 
-      for (var i = 0; i < grades.length; i++) {
+      div.appendChild(units)
 
-        div.innerHTML +=
-          '<i style="background:' + this.getChloroplethColor(grades[i] + 1) + '"></i> ' +
-          grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
+      for (let i = 0; i < grades.length; i++) {
+        const labelText = `${grades[i]}${grades[i + 1] ? `&ndash;${grades[i + 1]}<br>` : '+'}`
+        const label = document.createElement('span')
+        const bgColor = this.getChloroplethColor(grades[i] + 1)
+        const colorBlock = document.createElement('i')
+
+        colorBlock.style.backgroundColor = bgColor
+        label.innerHTML = labelText
+        div.appendChild(colorBlock)
+        div.appendChild(label)
       }
       return div
     }

@@ -3,13 +3,10 @@
     <div class="l-constrained">
       <div class="l-centervertically l-centervertically--left"> 
         <div class="text text--white text--heavy">
-          <h2 class="h1 flush h1--xlarge">Polluted Routes</h2>
-          <p class="h1">from</p>
+          <h2 class="h1 flush h1--xlarge">Map My Air</h2>
+          <p class="h3">beta</p>
         </div>
         <!-- .text -->
-        <svg class="icon--wnyc">
-          <use xlink:href="/static/img/defs.svg#wnyc"></use>
-        </svg>
       </div>
       <!-- .l-constrained -->
     </div>
@@ -22,10 +19,32 @@
     <div class="text-body">
       <p>Find out how air pollution levels vary throughout the city based on the time of your route. With GPX files from apps like Strava or Runkeeper, you can upload your run or ride below.</p>
       <p>This model is an approximation of the data currently being collected by Columbia University and WNYC&apos;s Biking and Breathing study. Your anonymous results from this site will be compared to those in the study.</p>  
+      <button {{action 'openModal' 'faq'}} class="btn btn--link btn--bluetext">For more info, click here</button>
 
       {{#accordion-dropdown}}
         <div class="text flush">
-          <p>Some instructions go here.</p>
+          <p>Create an account on the Strava or Runkeeper apps and record your bike or run. And then to download the GPX file of that bike or run -</p>
+          <p>On Strava:</p>
+          <ol>
+            <li>On your browser, visit <a href="http://www.strava.com" target="_blank">strava.com</a> and login.</li>
+            <li>In your Activity Feed, select one of your runs/bikes.</li>
+            <li>On the left-hand side, click on the wrench icon for actions. A menu will pop-up.</li>
+            <li>Select &ldquo;Export GPX.&rdquo; The GPX file should automatically download to your computer.</li>
+          </ol>
+          <p>For RunKeeper:</p>
+          <ol>
+            <li>On your browser, visit <a href="http://www.runkeeper.com/settigs" target="_blank">runkeeper.com/settings</a> and login.</li>
+            <li>Scroll to the bottom of the page, and click on the Export Data tab.</li>
+            <li>Select a &ldquo;Starting Date&rdquo; and &ldquo;Ending Date&rdquo; using the calendar boxes to provide your activity data within that timeframe.</li>
+            <li>Click the button &ldquo;Export Data&rdquo; to complete the export process.</li>
+            <li>Click the &ldquo;Download Now!&rdquo; button.</li>
+          </ol>
+          <p>Come to the WNYC/Columbia Biking and Breathing Page</p>
+          <ol>
+            <li>Click &rdquo;Upload File&ldquo;.</li>
+            <li>Select the GPX file you exported.</li>
+            <li>Click the blue &rdquo;Upload&ldquo; button.</li>
+          </ol>
         </div>
       {{/accordion-dropdown}}
 
@@ -38,9 +57,25 @@
 
     </div>
   </div>
-  <div style="position: relative;">
+  <div class="map">
     {{upload-progress progress=progress}}
 
     {{outlet}}
   </div>
+  <div class="l-flexspread">
+    <svg class="icon--wnyc logo">
+      <use xlink:href="/assets/images/defs.svg#wnyc"></use>
+    </svg>
+    <div class="logo">
+      <a href="http://www.earthinstitute.columbia.edu" target="_blank"><img src="/assets/images/eilogo.jpg"></a>
+    </div>
+    <div class="logo">
+      <a href="www.ldeo.columbia.edu" target="_blank"><img src="/assets/images/lamontlogo.jpg"></a>
+    </div>
+    <div class="logo">
+      <a href="https://www.mailman.columbia.edu/research/niehs-center-environmental-health-northern-manhattan" target="_blank"><img src="/assets/images/p30logo.png"></a>
+    </div>
+  </div>
 </div>
+
+{{outlet 'modal'}}

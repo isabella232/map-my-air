@@ -1,0 +1,188 @@
+#footer-inner {
+  margin: auto;
+  width: 100%;
+  max-width: 960px; /* Interior pages only for now. Homepage is wider. */
+}
+
+#footer_container{
+  margin-top: 25px;
+  padding: 25px 0px 0px 0px;
+  height: 450px;
+  background-color: #292929;
+  color: white;
+  font-size: 12px;
+}
+
+#footer_container a {
+  text-decoration: none;
+  color: white;
+}
+
+#footer_container a:hover {
+  text-decoration: underline;
+}
+
+#footer_container h2 {
+  display: inline-block;
+  text-indent: -9999px;
+  float: left;
+  background: transparent url('http://media.wnyc.org/media/img/wnyc/wnyc_sprite.png') no-repeat -364px 0;
+  width: 170px;
+  height: 42px;
+  margin-top: .2em;
+}
+
+#footer_container ul {
+  display: inline-block;
+  text-align: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#footer_container .menu_right {
+  float: right;
+}
+
+#footer_container li {
+  display: inline-block;
+  padding: 0 0.9em 2em;
+}
+
+#footer_container li a {
+  display: inline-block;
+}
+
+#footer_container .social a {
+  text-indent: -9999px;
+  margin-top: 2em;
+}
+
+#footer_container a.facebook {
+  background: transparent url('http://media.wnyc.org/media/img/wnyc/wnyc_sprite.png') no-repeat scroll -9px -125px;
+  width: 20px;
+  height: 20px;
+}
+
+#footer_container a.facebook:hover {
+  background: transparent url('http://media.wnyc.org/media/img/wnyc/wnyc_sprite.png') no-repeat scroll -98px -125px;
+}
+
+
+#footer_container a.twitter {
+  background: transparent url('http://media.wnyc.org/media/img/wnyc/wnyc_sprite.png') no-repeat scroll -35px -125px;
+  width: 20px;
+  height: 20px;
+}
+
+#footer_container a.twitter:hover {
+  background: transparent url('http://media.wnyc.org/media/img/wnyc/wnyc_sprite.png') no-repeat scroll -124px -125px;
+}
+
+
+#footer_container a.googleplus {
+  background: transparent url('http://media.wnyc.org/media/img/wnyc/wnyc_sprite.png') no-repeat scroll -65px -125px;
+  width: 20px;
+  height: 20px;
+}
+
+#footer_container a.googleplus:hover {
+  background: transparent url('http://media.wnyc.org/media/img/wnyc/wnyc_sprite.png') no-repeat scroll -154px -125px;
+}
+
+#footer_container a.tunein {
+  background: transparent url('http://media.wnyc.org/media/img/wnyc/wnyc_sprite.png') no-repeat scroll -178px -125px;
+  width: 20px;
+  height: 20px;
+}
+
+#footer_container a.tunein:hover {
+  background: transparent url('http://media.wnyc.org/media/img/wnyc/wnyc_sprite.png') no-repeat scroll -206px -125px;
+}
+
+#footer_container .footer_copyright {
+  font-size: .95em;
+  line-height: 2.2em;
+  color: #bfbfbf;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 82%;
+}
+
+#footer_container .footer_copyright .nypr_lockup ul li{
+  background: transparent url('http://media.wnyc.org/media/img/wnyc/wnyc_sprite.png') no-repeat scroll;
+  width: 80px;
+}
+
+#footer_container .footer_copyright .nypr_lockup ul li.nypr {
+  background-position: 0 -240px;
+}
+
+#footer_container .footer_copyright .nypr_lockup ul li.wnyc {
+  background-position: -95px -240px;
+}
+
+#footer_container .footer_copyright .nypr_lockup ul li.wqxr {
+  background-position: -185px -240px;
+}
+
+#footer_container .footer_copyright .nypr_lockup ul li.njpr {
+  background-position: -280px -240px;
+}
+
+#footer_container .footer_copyright .nypr_lockup ul li.greene-space {
+  background-position: -375px -240px;
+}
+
+
+#footer_container .footer_copyright .sponsor img {
+  top: -3px;
+  position: relative;
+  left: 5px;
+}
+
+#footer_container .footer_copyright .nypr_copyright {
+  margin-right: auto;
+  margin-left: auto;
+  width: inherit;
+}
+
+#footer_container .footer_copyright .nypr_copyright li {
+  float: none;
+  display: inline-block;
+}
+
+#footer_container .footer_copyright .nypr_lockup ul li a {
+  display: block;
+  text-indent: -9999px;
+  height: 80px;
+  width: 79px;
+}
+
+#footer_container .footer_copyright .nypr_link {
+  text-decoration: underline;
+  display: inline;
+}
+
+#footer_container .footer_copyright ul li {
+  padding: 0px 1em 0px 0px;
+}
+
+#footer_container .footer_copyright a {
+  color: #bfbfbf;
+}
+
+#footer_container .border.top {
+  border: none;
+  height: 1px;
+  background-color: black;
+  margin: 0px;
+}
+
+#footer_container .border.bottom {
+  border: none;
+  height: 1px;
+  background-color: #393939;
+  margin: 0px 0px 15px 0px;
+}

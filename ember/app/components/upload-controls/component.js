@@ -4,12 +4,13 @@ const {
   Component,
   $,
   set,
-  get
+  get,
+  computed
 } = Ember;
 
 export default Component.extend({
   classNames: ['upload-controls'],
-  uploadDisabled: Ember.computed.bool('progress'),
+  uploadDisabled: computed.bool('progress'),
 
   didInsertElement() {
     set(this, 'fileInput', $('#fileInput'))

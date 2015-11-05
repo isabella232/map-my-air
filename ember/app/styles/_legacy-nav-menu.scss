@@ -1,0 +1,32 @@
+#navigation-menu,
+#header {
+    font-family: "Gotham SSm A", "Gotham SSm B", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: initial;
+
+    a {
+        border-bottom: none;
+        transition: none;
+    }
+}
+
+#navigation-items {
+
+    a {
+        font-size: 1rem;
+        -webkit-font-smoothing: initial;
+        font-weight: 300;
+    }
+
+    .secondary a {
+        font-size: 12px;
+    }
+}
+
+#subnavigation-items a {
+    font-size: 13px;
+    font-weight: 300;
+}
+
+#search-button .fa-search {
+    vertical-align: baseline;
+}

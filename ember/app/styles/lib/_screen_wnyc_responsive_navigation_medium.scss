@@ -1,0 +1,114 @@
+@media screen and (min-width:800px) {
+
+  .navigation-open #full-page-viewport-wrapper {
+    /* Maintain scrollability when the nav is open in desktop view. */
+      /*
+    overflow-x: hidden;
+    overflow-y: auto;
+    */
+  }
+
+  .navigation-open #full-page-transforms-wrapper {
+    -webkit-transform: translate3d(220px, 0, 0);
+       -moz-transform: translate3d(220px, 0, 0);
+        -ms-transform: translate3d(220px, 0, 0);
+            transform: translate3d(220px, 0, 0);
+  }
+
+  .subnavigation-open #full-page-transforms-wrapper {
+    -webkit-transform: translate3d(500px, 0, 0);
+       -moz-transform: translate3d(500px, 0, 0);
+        -ms-transform: translate3d(500px, 0, 0);
+            transform: translate3d(500px, 0, 0);
+  }
+
+  #navigation-menu {
+    width: 220px;
+    left: -220px;
+    z-index: 4000; /* Must be higher than content to intercept taps on ipad */
+  }
+
+  #subnavigation-menu {
+    width: 280px;
+    left: -60px;
+    background-color: black;
+    background-image: url('http://media.wnyc.org/static/img/wnyc/bk-bridge.jpg');
+    background-position: -280px 0;
+    background-repeat: no-repeat;
+  }
+
+  .navigation-open #subnavigation-menu {
+    -webkit-transform: translate3d(0,0,0);
+       -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+  }
+
+  .navigation-open #navigation-menu,
+  .subnavigation-open #navigation-menu {
+    -webkit-transform: translate3d(220px, 0, 0);
+       -moz-transform: translate3d(220px, 0, 0);
+        -ms-transform: translate3d(220px, 0, 0);
+            transform: translate3d(220px, 0, 0);
+  }
+
+  .subnavigation-open #subnavigation-menu {
+    -webkit-transform: translate3d(280px, 0, 0);
+       -moz-transform: translate3d(280px, 0, 0);
+        -ms-transform: translate3d(280px, 0, 0);
+            transform: translate3d(280px, 0, 0);
+  }
+
+    #navigation-items-wrapper > .close-button
+  , #subnavigation-menu > .close-button
+  {
+    display: none;
+  }
+
+  #navigation-items {
+    width: 220px;
+    left: 0;
+  }
+
+  #navigation-items-wrapper {
+    background-color: black;
+    background-image: url('http://media.wnyc.org/static/img/wnyc/bk-bridge.jpg');
+    background-repeat: no-repeat;
+  }
+
+  #subnavigation-items {
+    padding: 1em 0;
+    background: rgb(0,0,0);
+    background: rgba(0,0,0,0.4);
+  }
+
+  #navigation-items li a.active-nav-item {
+    background: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.6);
+    border-left: 4px solid #DE1E3D;
+  }
+
+  #navigation-photo-credit {
+    display: none;
+    width: 100%;
+    margin: 65px 0 0 20px;
+    font-size: .9em;
+  }
+
+  @media screen and (min-height: 500px) {
+    #navigation-photo-credit {
+      position: absolute;
+      bottom: 20px;
+    }
+  }
+
+  #navigation-photo-credit p {
+    color: #adadad;
+    margin: 0;
+  }
+
+  #navigation-photo-credit a {
+    color: #dd1e3d;
+  }
+
+} /* end @media rule */

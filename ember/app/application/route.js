@@ -4,7 +4,8 @@ import Upload from 'polluted-routes/mixins/upload-mixin';
 const {
   Route,
   set,
-  get
+  get,
+  $
 } = Ember;
 
 export default Route.extend(Upload, {
@@ -28,6 +29,27 @@ export default Route.extend(Upload, {
           console.log('error status: ' + status)
           set(controller, 'progress', null)
       })
+    },
+    openModal(modalName, scrollTo) {
+      $(document.body).addClass('is-openmodal')
+
+      if (scrollTo) {
+        Ember.run.schedule('afterRender', this, () => {
+          $(`#${scrollTo}`).get(0).scrollIntoView()
+        })
+      }
+
+      return this.render(modalName, {
+        into: 'application',
+        outlet: 'modal'
+      })
+    },
+    closeModal() {
+      $(document.body).removeClass('is-openmodal')
+      return this.disconnectOutlet({
+        outlet: 'modal',
+        parentView: 'application'
+      });
     }
   }
 })

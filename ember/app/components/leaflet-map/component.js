@@ -2,12 +2,13 @@
 /* jshint unused: false*/
 import Ember from 'ember';
 import LeafletMixin from 'polluted-routes/mixins/leaflet-mixin';
+const { htmlSafe } = Ember.String;
 
 export default Ember.Component.extend(LeafletMixin, {
   attributeBindings: ['style'],
   elementId: 'map',
   style: Ember.computed(function() {
-      return 'height: 800px;'
+      return htmlSafe('height: 800px;')
   }),
   didInsertElement() {
     var map = new L.map('map', {
@@ -25,5 +26,11 @@ export default Ember.Component.extend(LeafletMixin, {
       map: map,
       googleLayer: googleLayer
     })
+  },
+  click(e) {
+    if (e.target.nodeName === 'A') {
+      e.preventDefault()
+      this.sendAction('openModal', 'faq', 'pm')
+    }
   }
 })

@@ -1,0 +1,175 @@
+/* Slideshow */
+
+.storyslides-container {
+	position: relative;
+}
+
+.slideshow-container {
+	clear: both;
+	margin: 10px 0 25px;
+	position: relative;
+}
+
+.slideshow-container-tease .link {
+    font-size: 11px;
+}
+
+.storyslides {
+  width: 620px;
+  display: block;
+  height: 350px;
+  overflow: hidden;
+}
+
+/* Slide Images */
+
+.storyslide {
+  display: none;
+  width: 620px;
+}
+
+.storyslide-image {
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    height: 350px;
+    overflow: hidden;
+}
+
+/* Slide Captions */
+
+.storyslide-info {
+	padding-top: 5px;
+	clear: both;
+}
+
+.storyslides .caption-holder {
+	min-height: 20px;
+	height: auto !important;
+	height: 20px;
+}
+
+.storyslides .caption {
+	width: 520px;
+	font-size: 13px;
+	color: #666;
+ line-height: 1.7em;
+}
+
+.storyslides .credit {
+	font-weight: normal;
+	width: 520px;
+	padding-bottom: 4px;
+	padding-top: 2px;
+}
+
+.storyslides .long-caption {
+	color: #666;
+	line-height: 1.4em;
+	padding-top: 0px;
+	margin: 0px;
+}
+	
+.storyslides .long-caption p {
+	padding-top: 0px;
+	margin: 0px;
+	padding-bottom: 6px;
+	font-size: 13px;
+}
+
+/* Slide Navigation */
+
+.storyslide-navigation {
+	position: absolute;
+	top: 355px;
+	right: 0px;
+	z-index: 1000;
+	width: 80px;
+	height: 18px;
+}
+
+.storyslide-prev, .storyslide-next {
+	display: block;
+	cursor: pointer;
+	width: 18px;
+	height: 18px;
+	overflow: hidden;
+	float: left;
+}
+
+.storyslide-prev {
+	background: #fff url('/media/img/slideshow-btn-prev.gif') no-repeat 0px 0px;
+}
+
+.storyslide-next {
+	background: #fff url('/media/img/slideshow-btn-next.gif') no-repeat 0px 0px;
+}
+
+.storyslide-prev:hover,  .storyslide-next:hover {
+	background-position: 0px -18px;
+}
+
+.storyslide-count {
+	float: left;
+	width: 44px;
+	height: 20px;
+	text-align: center;
+	overflow: hidden;
+	font-size: 10px !important;
+	line-height: 18px !important;
+	text-align: center;
+	padding: 0px !important;
+	margin: 0px !important;
+}
+
+/* More Slides */
+
+.moreslides a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.moreslides .teaserbox {
+	overflow: hidden;
+	height: 350px;
+	background-color: #000000;
+	text-align: center;
+}
+
+.moreslides .teaser {
+    margin-top: 65px;
+}
+
+.moreslides ul li {
+	float: left;
+	margin-left: 27px;
+	width: 120px !important;
+}
+
+/* Small slideshow overrides - small slideshow is for use in touts */
+
+.small .slideshow-container {
+	margin: 0;
+}
+
+.small .storyslides {
+  	width: 370px;
+  	height: 300px !important;
+}
+
+.small .storyslide,
+.small .storyslides .caption,
+.small .storyslides .credit {
+  	width: 370px;
+}
+
+.small .storyslide-image {
+    	height: 220px;
+}
+
+.small .storyslide-navigation {
+	top: 225px;
+}
+
+
+
