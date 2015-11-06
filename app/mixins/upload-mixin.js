@@ -1,6 +1,6 @@
 import Ember from 'ember';
 import EmberUploader from 'ember-uploader';
-import config from 'polluted-routes/config/environment';
+import config from 'map-my-air/config/environment';
 
 const {
   host

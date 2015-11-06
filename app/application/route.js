@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import Upload from 'polluted-routes/mixins/upload-mixin';
+import Upload from 'map-my-air/mixins/upload-mixin';
 
 const {
   Route,
