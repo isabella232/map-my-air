@@ -49,7 +49,11 @@
       {{/accordion-dropdown}}
 
       <div class="l-split flush">
-        {{upload-controls action='upload' progress=progress}}
+        {{upload-controls
+          action='upload'
+          progress=progress
+          routeId=routeId
+          dateTime=dateTime}}
 
         {{share-buttons route=currentRouteName}}
       </div>
@@ -70,7 +74,7 @@
       <a href="http://www.earthinstitute.columbia.edu" target="_blank"><img src="/assets/images/eilogo.jpg"></a>
     </div>
     <div class="logo">
-      <a href="www.ldeo.columbia.edu" target="_blank"><img src="/assets/images/lamontlogo.jpg"></a>
+      <a href="http://www.ldeo.columbia.edu" target="_blank"><img src="/assets/images/lamontlogo.jpg"></a>
     </div>
     <div class="logo">
       <a href="https://www.mailman.columbia.edu/research/niehs-center-environmental-health-northern-manhattan" target="_blank"><img src="/assets/images/p30logo.png"></a>
