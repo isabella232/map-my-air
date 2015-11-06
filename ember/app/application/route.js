@@ -22,11 +22,12 @@ export default Route.extend(Upload, {
       uploader.upload(file)
       .then(d => {
         set(controller, 'progress', 100)
+        set(controller, 'routeId', d.cartodbId)
         this.transitionTo('view', d.cartodbId)
-          .then(set(controller, 'progress', null))
+          .then(() => {set(controller, 'progress', null)})
         }, () => {
           // error handling
-          console.log('error status: ' + status)
+          console.log('error status: ', arguments)
           set(controller, 'progress', null)
       })
     },
