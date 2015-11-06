@@ -19,7 +19,7 @@ module.exports = function(environment) {
       rootElement: '#ember'
     },
     contentSecurityPolicy: {
-      'connect-src': 'ws://dev.wnyc.net:* *.cartodb.com',
+      'connect-src': 'ws://dev.wnyc.net:* *.cartodb.com *.us-west-2.compute.amazonaws.com',
       'img-src': "'self' *.googleapis.com *.gstatic.com *.google.com *.wnyc.org",
       'script-src': "'self' maps.gstatic.com *.googleapis.com *.google.com media.wnyc.org dev.wnyc.net:*",
       'font-src': "'self' http://fonts.gstatic.com data: media.wnyc.org",
