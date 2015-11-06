@@ -6,6 +6,8 @@
       <button {{action 'chooseFile'}} class="btn" disabled={{uploadDisabled}}>Choose New File</button>
       <button {{action 'upload'}} class="btn btn--blue" disabled={{uploadDisabled}}>Upload</button>
   {{else}}
-    <button {{action 'chooseFile'}} class="btn">Upload your biking data</button>
+    <button {{action 'chooseFile'}} class="btn">{{dynamicLabel}}</button>
   {{/if}}
+
+  <span class="text text--medium flush">{{dateTime}}</span>
 </div>
