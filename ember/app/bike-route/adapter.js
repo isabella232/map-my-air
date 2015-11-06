@@ -1,5 +1,5 @@
 import DS from 'ember-data';
-import config from 'polluted-routes/config/environment';
+import config from 'map-my-air/config/environment';
 
 const {
   cartoHost,

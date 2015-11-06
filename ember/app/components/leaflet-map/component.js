@@ -1,7 +1,7 @@
 /* global L*/
 /* jshint unused: false*/
 import Ember from 'ember';
-import LeafletMixin from 'polluted-routes/mixins/leaflet-mixin';
+import LeafletMixin from 'map-my-air/mixins/leaflet-mixin';
 const {
   get,
   set

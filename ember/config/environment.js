@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'polluted-routes',
+    modulePrefix: 'map-my-air',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
