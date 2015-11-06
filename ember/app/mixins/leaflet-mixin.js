@@ -55,7 +55,7 @@ export default Ember.Mixin.create({
       div.appendChild(units)
 
       for (let i = 0; i < grades.length; i++) {
-        const labelText = `${grades[i]}${grades[i + 1] ? `&ndash;${grades[i + 1]}<br>` : '+'}`
+        const labelText = `${grades[i].toFixed(2)}${grades[i + 1] ? `&ndash;${grades[i + 1].toFixed(2)}<br>` : '+'}`
         const label = document.createElement('span')
         const bgColor = this.getChloroplethColor(grades[i] + 1)
         const colorBlock = document.createElement('i')
