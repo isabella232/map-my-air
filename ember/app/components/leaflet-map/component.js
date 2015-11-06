@@ -2,6 +2,10 @@
 /* jshint unused: false*/
 import Ember from 'ember';
 import LeafletMixin from 'polluted-routes/mixins/leaflet-mixin';
+const {
+  get,
+  set
+} = Ember;
 const { htmlSafe } = Ember.String;
 
 export default Ember.Component.extend(LeafletMixin, {
@@ -11,21 +15,35 @@ export default Ember.Component.extend(LeafletMixin, {
       return htmlSafe('height: 800px;')
   }),
   didInsertElement() {
-    var map = new L.map('map', {
+    const map = new L.map('map', {
       center: new L.LatLng(40.735, -73.96),
       zoom: 11,
       scrollWheelZoom: false
     })
 
-    var googleLayer = new L.Google('TERRAIN')
+    const googleLayer = new L.Google('TERRAIN')
     map.addLayer(googleLayer)
 
     this.addRouteLegend(map)
-    this.addRouteStyle(this.get('geoJson.features')).addTo(map)
+
     this.setProperties({
       map: map,
       googleLayer: googleLayer
     })
+  },
+  didRender() {
+    const map = get(this, 'map')
+    const oldJSON = get(this, 'geoJSON')
+    const geoJSONGroup = this.addRouteStyle(get(this, 'geoJson.features')).addTo(map)
+
+    if (oldJSON) {
+      map.removeLayer(oldJSON)
+    }
+    if (geoJSONGroup.getBounds().isValid()) {
+      map.fitBounds(geoJSONGroup.getBounds(), {reset: true})
+    }
+
+    set(this, 'geoJSON', geoJSONGroup)
   },
   click(e) {
     if (e.target.nodeName === 'A') {
