@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import service from 'ember-service/inject';
 import Upload from 'map-my-air/mixins/upload-mixin';
 
 const {
@@ -9,10 +10,13 @@ const {
 } = Ember;
 
 export default Route.extend(Upload, {
+  metrics: service(),
   actions: {
     upload(file) {
       const uploader = get(this, 'uploader')
       const controller = get(this ,'controller')
+      const metrics = get(this, 'metrics')
+      const now = Date.now()
 
       uploader.on('progress', evt => {
         const progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
@@ -23,15 +27,38 @@ export default Route.extend(Upload, {
       .then(d => {
         set(controller, 'progress', 100)
         set(controller, 'routeId', d.cartodbId)
+
+        metrics.trackEvent({
+          category: 'Upload',
+          action: 'Finished Upload',
+          label: `${file.name}: ${now}`,
+          value: d.cartodbId
+        })
+
         this.transitionTo('view', d.cartodbId)
           .then(() => {set(controller, 'progress', null)})
         }, () => {
           // error handling
-          console.log('error status: ', arguments)
           set(controller, 'progress', null)
+
+          metrics.trackEvent({
+            category: 'Upload',
+            action: 'Errored Upload',
+            label: `${file.name}: ${now}`
+          })
+
+          alert("There was an error uploading your file. Please ensure it is a valid GPX file.")
+      })
+
+      metrics.trackEvent({
+        category: 'Upload',
+        action: 'Started Upload',
+        label: `${file.name}: ${now}`
       })
     },
     openModal(modalName, scrollTo) {
+      const metrics = get(this, 'metrics')
+
       $(document.body).addClass('is-openmodal')
 
       if (scrollTo) {
@@ -40,13 +67,26 @@ export default Route.extend(Upload, {
         })
       }
 
+      metrics.trackEvent({
+        category: 'Modal',
+        action: 'Open Modal',
+      })
+
       return this.render(modalName, {
         into: 'application',
         outlet: 'modal'
       })
     },
     closeModal() {
+      const metrics = get(this, 'metrics')
+
       $(document.body).removeClass('is-openmodal')
+
+      metrics.trackEvent({
+        category: 'Modal',
+        action: 'Close Modal'
+      })
+
       return this.disconnectOutlet({
         outlet: 'modal',
         parentView: 'application'
