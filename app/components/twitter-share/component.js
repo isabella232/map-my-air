@@ -16,9 +16,10 @@ export default Component.extend({
 
     window.open(twitterUrl, 'pop', 'width=600, height=400, scrollbars=no');
     metrics.trackEvent({
-      category: 'Share',
-      action: 'Facebook',
-      label: url
+      category: 'Map My Air',
+      action: 'Share',
+      label: 'Twitter',
+      value: location.hash.split('/')[1]
     })
   }
 });

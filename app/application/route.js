@@ -29,9 +29,9 @@ export default Route.extend(Upload, {
         set(controller, 'routeId', d.cartodbId)
 
         metrics.trackEvent({
-          category: 'Upload',
-          action: 'Finished Upload',
-          label: `${file.name}: ${now}`,
+          category: 'Map My Air',
+          action: 'Upload',
+          label: `finished ${file.name}: ${now}`,
           value: d.cartodbId
         })
 
@@ -42,18 +42,18 @@ export default Route.extend(Upload, {
           set(controller, 'progress', null)
 
           metrics.trackEvent({
-            category: 'Upload',
-            action: 'Errored Upload',
-            label: `${file.name}: ${now}`
+            category: 'Map My Air',
+            action: 'Upload',
+            label: `errored ${file.name}: ${now}`
           })
 
           alert("There was an error uploading your file. Please ensure it is a valid GPX file.")
       })
 
       metrics.trackEvent({
-        category: 'Upload',
-        action: 'Started Upload',
-        label: `${file.name}: ${now}`
+        category: 'Map My Air',
+        action: 'Upload',
+        label: `started ${file.name}: ${now}`
       })
     },
     openModal(modalName, scrollTo) {
@@ -68,8 +68,9 @@ export default Route.extend(Upload, {
       }
 
       metrics.trackEvent({
-        category: 'Modal',
-        action: 'Open Modal',
+        category: 'Map My Air',
+        action: 'Modal',
+        label: 'Open Modal',
       })
 
       return this.render(modalName, {
@@ -83,8 +84,9 @@ export default Route.extend(Upload, {
       $(document.body).removeClass('is-openmodal')
 
       metrics.trackEvent({
-        category: 'Modal',
-        action: 'Close Modal'
+        category: 'Map My Air',
+        action: 'Modal',
+        label: 'Close Modal'
       })
 
       return this.disconnectOutlet({
