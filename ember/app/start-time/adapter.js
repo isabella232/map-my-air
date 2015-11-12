@@ -1,0 +1,17 @@
+import DS from 'ember-data';
+import config from 'map-my-air/config/environment';
+
+const {
+  cartoHost,
+  cartoNamespace
+} = config;
+
+export default DS.RESTAdapter.extend({
+  host: cartoHost,
+  namespace: cartoNamespace,
+  urlForFindRecord(id) {
+    const query = `SELECT start_timestamp FROM gpxline where cartodb_id = ${id}`
+    return `${this.host}/${this.namespace}/?q=${query}`
+  }
+})
+
