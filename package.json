@@ -38,6 +38,7 @@
     "ember-data": "2.0.1",
     "ember-disable-proxy-controllers": "^1.0.0",
     "ember-export-application-global": "^1.0.2",
-    "ember-leaflet": "git://github.com/gabesmed/ember-leaflet.git#7f76936d8ca717369b3c6c0f71ca77ea80422152"
+    "ember-leaflet": "git://github.com/gabesmed/ember-leaflet.git#7f76936d8ca717369b3c6c0f71ca77ea80422152",
+    "ember-metrics": "0.5.1"
   }
 }

@@ -19,15 +19,21 @@ module.exports = function(environment) {
       rootElement: '#ember'
     },
     contentSecurityPolicy: {
-      'connect-src': 'ws://dev.wnyc.net:* *.cartodb.com *.us-west-2.compute.amazonaws.com',
-      'img-src': "'self' *.googleapis.com *.gstatic.com *.google.com *.wnyc.org",
-      'script-src': "'self' maps.gstatic.com *.googleapis.com *.google.com media.wnyc.org dev.wnyc.net:*",
+      'connect-src': 'ws://dev.wnyc.net:* *.cartodb.com *.us-west-2.compute.amazonaws.com www.google-analytics.com',
+      'img-src': "'self' *.googleapis.com *.gstatic.com *.google.com *.wnyc.org www.google-analytics.com",
+      'script-src': "'self' maps.gstatic.com *.googleapis.com *.google.com media.wnyc.org dev.wnyc.net:* www.google-analytics.com",
       'font-src': "'self' http://fonts.gstatic.com data: media.wnyc.org",
       'style-src': "'self' 'unsafe-inline' fonts.googleapis.com cloud.typography.com media.wnyc.org"
     },
     host: 'http://ec2-52-27-37-89.us-west-2.compute.amazonaws.com',
     cartoHost: 'http://columbia-wnyc.cartodb.com',
-    cartoNamespace: 'api/v2/sql'
+    cartoNamespace: 'api/v2/sql',
+    metricsAdapters: [{
+      name: 'GoogleAnalytics',
+      config: {
+        id: 'UA-283599-23'
+      }
+    }]
   };
 
   if (environment === 'development') {
