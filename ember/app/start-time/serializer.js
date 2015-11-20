@@ -7,7 +7,7 @@ export default DS.Serializer.extend({
         type: 'start-time',
         id,
         attributes: {
-          startTimestamp: payload.rows[0]['start_timestamp']
+          start: payload.rows[0]['start_timestamp']
         }
       }
     };

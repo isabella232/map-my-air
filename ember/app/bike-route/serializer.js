@@ -1,22 +1,30 @@
 import DS from 'ember-data';
-import Ember from 'ember';
 
-const { get } = Ember;
-
-export default DS.RESTSerializer.extend({
-  isNewSerializerAPI: true,
-  normalizeFindRecordResponse(store, typeClass, payload, id, requestType) {
-
-    payload.bikeRoute = {
-      id: id,
-      features: payload.features,
-      type: payload.type,
-      dateTime: get(payload, 'features.firstObject.properties.created_at')
+export default DS.JSONAPISerializer.extend({
+  normalizeResponse(store, typeClass, {features, type}, id) {
+    return {
+      data: {
+        id,
+        type: 'bike-route',
+        attributes: {
+          features,
+          type
+        },
+        relationships: {
+          timestamp: {
+            data: {
+              id,
+              type: 'start-time'
+            }
+          },
+          pollution: {
+            data: {
+              id,
+              type: 'temporal-adjustment'
+            }
+          }
+        }
+      }
     }
-
-    delete payload.features
-    delete payload.type
-
-    return this._super(store, typeClass, payload, id, requestType)
   }
 })

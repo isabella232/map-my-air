@@ -2,31 +2,49 @@
 import Ember from 'ember';
 
 export default Ember.Mixin.create({
-  getChloroplethColor(uk) {
-    if (uk < 11.7) {
-        return "#FFFFB2";
-    } else if (uk > 11.69 && uk < 12.7) {
-        return "#FED976";
-    } else if (uk > 12.69 && uk < 13.7) {
-        return "#FEB24C";
-    } else if (uk > 13.69 && uk < 14.7) {
-        return "#FD8D3C";
-    } else if (uk > 14.69 && uk < 15.7) {
-        return "#FC4E2A";
-    } else if (uk > 15.69 && uk < 16.7) {
-        return "#E31A1C";
+  getChloroplethColor(uk, adjustment) {
+    if (uk == null) {
+      return '#abadb1'
+    }
+
+    if (adjustment) {
+      uk = uk * adjustment
+    }
+
+    if (uk < 4.1) {
+        return "#ffeda0";
+    } else if (uk > 4 && uk < 6.1) {
+        return "#fed976";
+    } else if (uk > 6 && uk < 8.1) {
+        return "#feb24c";
+    } else if (uk > 8 && uk < 10.1) {
+        return "#fd8d3c";
+    } else if (uk > 10 && uk < 12.1) {
+        return "#fc4e2a";
+    } else if (uk > 12 && uk < 14.1) {
+        return "#e31a1c";
+    } else if (uk > 14 && uk < 16.1) {
+        return "#bd0026";
     } else {
-        return "#B10026";
+        return "#800026";
     }
   },
-  getRouteStyle(feature) {
+  getRouteStyle(feature, adjustment) {
     return {
-      color: this.getChloroplethColor(feature.properties.ukpred),
+      color: this.getChloroplethColor(feature.properties.ukpred, adjustment),
+      lineCap: 'butt',
+      opacity: 0.8
+    }
+  },
+  getAdjustedRouteStyle(feature, adjustment) {
+    return {
+      color: this.getChloroplethColor(feature.properties.ukpred, adjustment),
       lineCap: 'butt',
       opacity: 0.8
     }
   },
   addRouteStyle(geoJSON) {
+    //const fn = adjustment ? this.getAdjustedRouteStyle.bind(this) : this.getRouteStyle.bind(this)
     return L.geoJson(geoJSON, {
       style: this.getRouteStyle.bind(this),
       onEachFeature( feature, layer ) {
@@ -47,7 +65,7 @@ export default Ember.Mixin.create({
 
     function onAdd() {
       const div = L.DomUtil.create('div', 'info legend')
-      const grades = [0, 11.7, 12.7, 13.7, 14.7, 15.7, 16.7]
+      const grades = [0, 4, 4.1, 6, 6.1, 8, 8.1, 10, 10.1, 12, 12.1, 14, 14.1, 16, 16]
       const units = document.createElement('div')
       units.className = 'info-label'
       units.innerHTML = '<a href="#">PM<sub>2.5</sub> &micro;g/m<sup>3</sup></a>'

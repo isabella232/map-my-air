@@ -4,11 +4,14 @@ import Ember from 'ember';
 import LeafletMixin from 'map-my-air/mixins/leaflet-mixin';
 const {
   get,
-  set
+  set,
+  Component,
+  computed
 } = Ember;
 const { htmlSafe } = Ember.String;
 
-export default Ember.Component.extend(LeafletMixin, {
+export default Component.extend(LeafletMixin, {
+  pollution: computed.alias('geoJson.pollution.pm25Ratio'),
   attributeBindings: ['style'],
   elementId: 'map',
   style: Ember.computed(function() {
@@ -34,7 +37,7 @@ export default Ember.Component.extend(LeafletMixin, {
   didRender() {
     const map = get(this, 'map')
     const oldJSON = get(this, 'geoJSON')
-    const geoJSONGroup = this.addRouteStyle(get(this, 'geoJson.features')).addTo(map)
+    const geoJSONGroup = this.addRouteStyle(get(this, 'geoJson.features'), get(this, 'pollution')).addTo(map)
 
     if (oldJSON) {
       map.removeLayer(oldJSON)

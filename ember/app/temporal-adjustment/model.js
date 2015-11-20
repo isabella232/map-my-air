@@ -1,5 +1,6 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
-  start: DS.attr('date')
+  pm25Ratio: DS.attr('number')
 })
+
