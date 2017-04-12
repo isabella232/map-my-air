@@ -1,0 +1,32 @@
+machine:
+  node:
+    version:
+      - 6.10.2
+
+dependencies:
+  pre:
+    - sudo apt-get update && sudo apt-get install ruby-sass
+    - gem update --system
+    - gem install compass --no-ri --no-rdoc
+    - npm set progress=false
+    - npm install -g bower
+    - bower i
+  cache_directories:
+    - /opt/circleci/nodejs/v6.10.2/bin/
+    - /opt/circleci/nodejs/v6.10.2/lib/node_modules
+
+test:
+  override:
+    - echo "no tests"
+
+deployment:
+  prod:
+    branch: master
+    commands:
+      - ./node_modules/ember-cli/bin/ember deploy production --verbose --activate:
+          environment:
+            AWS_ACCESS_KEY_ID: $DEPLOY_AWS_ACCESS_KEY_ID
+            AWS_SECRET_ACCESS_KEY: $DEPLOY_AWS_SECRET_ACCESS_KEY
+            AWS_BUCKET: $PROD_AWS_BUCKET
+            AWS_REGION: $PROD_AWS_REGION
+            AWS_PREFIX: $PROD_AWS_PREFIX
