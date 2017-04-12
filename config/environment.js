@@ -1,15 +1,19 @@
-/* jshint node: true */
+/* eslint-env node */
 
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'map-my-air',
     environment: environment,
-    baseURL: '/map-my-air/',
+    rootURL: '/map-my-air/',
     locationType: 'hash',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
         // e.g. 'with-controller': true
+      },
+      EXTEND_PROTOTYPES: {
+        // Prevent Ember Data from overriding Date.parse.
+        Date: false
       }
     },
 
@@ -25,8 +29,8 @@ module.exports = function(environment) {
       'font-src': "'self' http://fonts.gstatic.com data: media.wnyc.org",
       'style-src': "'self' 'unsafe-inline' fonts.googleapis.com cloud.typography.com media.wnyc.org"
     },
-    host: 'http://ec2-52-27-37-89.us-west-2.compute.amazonaws.com',
-    cartoHost: 'http://columbia-wnyc.cartodb.com',
+    host: 'https://ec2-52-27-37-89.us-west-2.compute.amazonaws.com',
+    cartoHost: 'https://columbia-wnyc.cartodb.com',
     cartoNamespace: 'api/v2/sql',
     metricsAdapters: [{
       name: 'GoogleAnalytics',
@@ -47,7 +51,6 @@ module.exports = function(environment) {
 
   if (environment === 'test') {
     // Testem prefers this...
-    ENV.baseURL = '/';
     ENV.locationType = 'none';
 
     // keep test console output quieter
