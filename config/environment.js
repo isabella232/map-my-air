@@ -29,7 +29,7 @@ module.exports = function(environment) {
       'font-src': "'self' http://fonts.gstatic.com data: media.wnyc.org",
       'style-src': "'self' 'unsafe-inline' fonts.googleapis.com cloud.typography.com media.wnyc.org"
     },
-    host: 'https://ec2-52-27-37-89.us-west-2.compute.amazonaws.com',
+    host: 'https://cloud1.zevross.com/wnyc/map-my-air',
     cartoHost: 'https://columbia-wnyc.cartodb.com',
     cartoNamespace: 'api/v2/sql',
     metricsAdapters: [{
