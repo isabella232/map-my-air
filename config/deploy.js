@@ -15,7 +15,8 @@ module.exports = function(deployTarget) {
       secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
       bucket: process.env.AWS_BUCKET,
       region: process.env.AWS_REGION,
-      prefix: process.env.AWS_PREFIX
+      prefix: process.env.AWS_PREFIX,
+      allowOverwrite: true
     }
     // include other plugin configuration that applies to all deploy targets here
   };
