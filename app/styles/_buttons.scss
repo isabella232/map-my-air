@@ -55,7 +55,7 @@
  */
 .btn.btn--blank {
     padding: 0;
-    border: none;
+    border: none !important;
     border-radius: 0;
     color: #333;
     // IE doesn't support initial
