@@ -6,7 +6,7 @@ const { get, run } = Ember;
 
 const Router = Ember.Router.extend({
   location: config.locationType,
-  rootURL: '/map-my-air/',
+  rootURL: config.rootURL,
   metrics: service(),
 
   didTransition() {
